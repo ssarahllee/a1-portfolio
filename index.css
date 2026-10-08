@@ -1,36 +1,48 @@
-header {
-  width: 100%;
-  position: relative;
-  height: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.portfolio-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
   background-color: white;
   border-bottom: 1px;
   border-color: #ebebeb;
   border-style: solid;
 }
 
-.nav-work {
-  position: absolute;
-  top: 35px;
-  right: 15%;
+.nav-brand {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: gray;
+  text-decoration: none;
 }
 
-.nav-about {
-  position: absolute;
-  top: 35px;
-  right: 10%;
+.nav-brand:hover {
+  color: blueviolet;
 }
 
-.nav-resume {
-  position: absolute;
-  top: 35px;
-  right: 5%;
+.portfolio-nav .nav {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+  color: gray;
+}
+
+.portfolio-nav .nav-link {
+  color: gray;
+}
+
+.portfolio-nav .nav-link:hover {
+  color: blueviolet;
 }
 
 .top {
+  font-family: "Inter", sans-serif;
   color: black;
   position: relative;
   width: 85%;
-  margin-left: 10%;
+  margin-left: 8%;
   padding-top: 170px;
   padding-bottom: 150px;
 }
@@ -62,23 +74,13 @@ header {
   object-fit: cover;
 }
 
-.role {
-  display: inline-block;
-  vertical-align: top;
-  width: 40%;
-}
-
-.role h4 {
+.label {
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
-  color: gray;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: normal;
-  font-size: 1em;
 }
 
-.role p {
-  color: black;
-  margin: 0;
-  font-size: 1em;
+.label {
+  color: gray;
+  font-size: 0.85em;
+  margin-bottom: 0.5em;
 }
