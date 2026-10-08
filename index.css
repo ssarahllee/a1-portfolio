@@ -43,7 +43,7 @@
   position: relative;
   width: 85%;
   margin-left: 8%;
-  padding-top: 170px;
+  padding-top: 100px;
   padding-bottom: 150px;
 }
 
@@ -51,7 +51,7 @@
   color: black;
   font-size: 4em;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1;
   margin-top: 0;
   margin-bottom: 0.2em;
 }
@@ -83,4 +83,38 @@
   color: gray;
   font-size: 0.85em;
   margin-bottom: 0.5em;
+}
+
+.works-card-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.works-card {
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.works-card:hover {
+  border-color: blueviolet;
+}
+
+.works-tag {
+  border: 1px solid #1a1a1a;
+  font-weight: normal;
+  background-color: white;
+  color: black;
+}
+
+.works-link {
+  color: #1a1a1a;
+}
+
+.card-body:hover .works-link {
+  color: blueviolet;
+}
+
+.card-body:hover .card-description {
+  color: blueviolet;
 }
