@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 .portfolio-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 8%;
+  padding: 24px;
   background-color: white;
   border-bottom: 1px;
   border-color: #ebebeb;
@@ -41,8 +38,6 @@
   font-family: "Inter", sans-serif;
   color: black;
   position: relative;
-  width: 85%;
-  margin-left: 8%;
   padding-top: 100px;
   padding-bottom: 150px;
 }
@@ -51,32 +46,18 @@
   color: black;
   font-size: 4em;
   font-weight: normal;
-  line-height: 1;
-  margin-top: 0;
   margin-bottom: 0.2em;
 }
 
 .description {
   font-size: 2em;
-  line-height: 1.5;
-  width: 65%;
-  margin-top: 0;
   margin-bottom: 2em;
-}
-
-.profile {
-  position: absolute;
-  top: 170px;
-  right: 0;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .label {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
+  font-weight: normal;
 }
 
 .label {
@@ -86,14 +67,14 @@
 }
 
 .works-card-img {
-  height: 300px;
+  height: 350px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .works-card {
-  border: 1px solid #ebebeb;
-  border-radius: 16px;
   overflow: hidden;
+  border: none;
 }
 
 .works-card:hover {
@@ -116,5 +97,51 @@
 }
 
 .card-body:hover .card-description {
+  color: blueviolet;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.about-description {
+  font-size: 2em;
+  line-height: 1;
+}
+
+.about-tag {
+  border: 1px solid #1a1a1a;
+  font-weight: normal;
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: white;
+  border-top: 1px;
+  border-top-color: #ebebeb;
+  border-top-style: solid;
+}
+
+.footer-heading {
+  font-weight: normal;
+  font-size: 3em;
+  margin-bottom: 3%;
+}
+
+.footer-btn:hover {
+  background-color: blueviolet;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-link:hover {
   color: blueviolet;
 }
