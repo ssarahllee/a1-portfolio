@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+.section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
 .portfolio-nav {
   padding: 24px;
   background-color: white;
@@ -58,9 +63,6 @@
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
-}
-
-.label {
   color: gray;
   font-size: 0.85em;
   margin-bottom: 0.5em;
@@ -101,14 +103,21 @@
 }
 
 .profile-img {
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .about-description {
   font-size: 2em;
   line-height: 1;
+  margin-bottom: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.about-text p {
+  overflow-wrap: anywhere;
 }
 
 .about-tag {
