@@ -17,12 +17,15 @@ EMAIL: sarahsl7@uci.edu
     />
     <link rel="stylesheet" href="index.css" />
     <!-- you would also link to Bootstrap here! -->
-    <title>Roomscape | Sarah Lee</title>
+    <title>Sarah Lee's Roomscape Case Study</title>
   </head>
   <body>
     <!-- nav bar -->
     <header>
-      <nav class="navbar navbar-expand-md portfolio-nav fixed-top">
+      <nav
+        class="navbar portfolio-nav fixed-top"
+        aria-label="Sarah Lee, home page"
+      >
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -30,16 +33,30 @@ EMAIL: sarahsl7@uci.edu
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#works">Works</a>
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#works"
+                aria-label="Works"
+                >Works</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html" aria-label="About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="resume.pdf" target="_blank">Resume</a>
+              <a
+                class="nav-link"
+                href="resume.pdf"
+                target="_blank"
+                aria-label="Resume (opens in a new tab)"
+                >Resume</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" aria-label="Contact"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -51,15 +68,15 @@ EMAIL: sarahsl7@uci.edu
       <img
         src="RoomscapeApp.png"
         class="img-fluid cs-hero-img"
-        alt="Two phones showing the Roomscape furniture shopping app: a login screen and a home screen with curated furniture recommendations."
+        alt="Roomscape app on two phones showing a login screen and a home screen with furniture recommendations."
       />
       <!-- back button -->
       <a href="index.html#works" class="back-button"><- Works</a>
       <h1 class="cs-title">Roomscape - AR Shopping Experience</h1>
-      <h4 class="cs-summary">
+      <h2 class="cs-summary">
         Leveraging AR design to enhance spatial visualization and empower
         confidence decision-making in online furniture retail.
-      </h4>
+      </h2>
       <!-- introduction-->
       <div class="row cs-intro">
         <div class="col-6 col-md-3 mb-3">
@@ -95,7 +112,7 @@ EMAIL: sarahsl7@uci.edu
           >
             <div>
               <p class="label">Pages</p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" aria-label="Pages">
                 <li><a href="#works" class="footer-link">Works</a></li>
                 <li><a href="about.html" class="footer-link">About</a></li>
                 <li>
@@ -112,7 +129,7 @@ EMAIL: sarahsl7@uci.edu
 
             <div>
               <p class="label">Contact</p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" aria-label="Contact">
                 <li>
                   <a
                     href="https://www.linkedin.com/in/sarah-lee-271b3a2b9/?isSelfProfile=true"

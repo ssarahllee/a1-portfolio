@@ -52,7 +52,21 @@ body {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 640px) {
+  .top {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .top {
+    padding-top: 70px;
+    padding-bottom: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .top {
     padding-top: 100px;
     padding-bottom: 65px;

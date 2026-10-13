@@ -17,12 +17,15 @@ EMAIL: sarahsl7@uci.edu
     />
     <link rel="stylesheet" href="index.css" />
     <!-- you would also link to Bootstrap here! -->
-    <title>Contact | Sarah Lee</title>
+    <title>Sarah Lee's Contact Page</title>
   </head>
   <body>
     <!-- nav bar -->
     <header>
-      <nav class="navbar navbar-expand-md portfolio-nav fixed-top">
+      <nav
+        class="navbar portfolio-nav fixed-top"
+        aria-label="Sarah Lee, home page"
+      >
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -30,18 +33,30 @@ EMAIL: sarahsl7@uci.edu
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html#works"
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#works"
+                aria-label="Works"
                 >Works</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html" aria-label="About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="resume.pdf" target="_blank">Resume</a>
+              <a
+                class="nav-link"
+                href="resume.pdf"
+                target="_blank"
+                aria-label="Resume (opens in a new tab)"
+                >Resume</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" aria-label="Contact"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -51,7 +66,7 @@ EMAIL: sarahsl7@uci.edu
     <!--contact section-->
     <main class="container section">
       <h1 class="cs-title">Contact</h1>
-      <h4 class="cs-summary">Send me a message!</h4>
+      <h2 class="cs-summary">Send me a message!</h2>
       <form class="contact-form">
         <div class="mb-4">
           <label for="contactName" class="form-label">Name</label>
@@ -120,7 +135,7 @@ EMAIL: sarahsl7@uci.edu
           >
             <div>
               <p class="label">Pages</p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" aria-label="Pages">
                 <li><a href="#works" class="footer-link">Works</a></li>
                 <li><a href="about.html" class="footer-link">About</a></li>
                 <li>
@@ -137,7 +152,7 @@ EMAIL: sarahsl7@uci.edu
 
             <div>
               <p class="label">Contact</p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" aria-label="Contact">
                 <li>
                   <a
                     href="https://www.linkedin.com/in/sarah-lee-271b3a2b9/?isSelfProfile=true"

@@ -17,13 +17,13 @@ EMAIL: sarahsl7@uci.edu
     />
     <link rel="stylesheet" href="index.css" />
     <!-- you would also link to Bootstrap here! -->
-    <title>Sarah Lee | Product Designer</title>
+    <title>Sarah Lee's Portfolio</title>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- nav bar -->
     <header>
-      <nav class="navbar navbar-expand-md portfolio-nav fixed-top">
+      <nav class="navbar portfolio-nav fixed-top" aria-label="Main">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -31,16 +31,30 @@ EMAIL: sarahsl7@uci.edu
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#works">Works</a>
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="#works"
+                aria-label="Works"
+                >Works</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html" aria-label="About">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="resume.pdf" target="_blank">Resume</a>
+              <a
+                class="nav-link"
+                href="resume.pdf"
+                target="_blank"
+                aria-label="Resume (opens in a new tab)"
+                >Resume</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" aria-label="Contact"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -53,7 +67,10 @@ EMAIL: sarahsl7@uci.edu
       <section class="container top">
         <p class="label">Product Designer</p>
         <h1>Sarah Lee</h1>
-        <p class="description">Some description of me as a product designer</p>
+        <p class="description">
+          I am a product designer passionate about designing meaningful
+          experiences for human connection!
+        </p>
 
         <div class="row mt-5">
           <div class="col-12 col-md-4 mb-3">
@@ -61,7 +78,11 @@ EMAIL: sarahsl7@uci.edu
             <p>UI/UX Designer @ UC Irvine Student Center & Event Services</p>
             <p>
               UX Design Lead @
-              <a href="https://daplab.ahnjune.com/">Design & Partnership Lab</a>
+              <a
+                href="https://daplab.ahnjune.com/"
+                aria-label="Design & Partnership Lab"
+                >Design & Partnership Lab</a
+              >
             </p>
           </div>
           <div class="col-12 col-md-4 mb-3">
@@ -82,11 +103,14 @@ EMAIL: sarahsl7@uci.edu
               <img
                 src="CareNiva.png"
                 class="card-img-top works-card-img"
-                alt="CareNiva app screen showing the general interface of a clinical note drafted automatically, and two popups for a note signed and 3 visits booked."
+                alt="Dashboard of the CareNiva AI data agent conversational bot."
               />
               <div class="card-body">
                 <h3 class="card-title">
-                  <a href="casestudy1.html" class="stretched-link works-link"
+                  <a
+                    href="casestudy1.html"
+                    class="stretched-link works-link"
+                    aria-label="CareNiva Inc."
                     >CareNiva Inc.</a
                   >
                 </h3>
@@ -106,16 +130,19 @@ EMAIL: sarahsl7@uci.edu
           </div>
 
           <!-- card #2 -->
-          <div class="col-12 col-md-6 mb-4">
+          <div class="col-12 col-md-6">
             <div class="card h-100 works-card">
               <img
                 src="UCIesports.png"
                 class="card-img-top works-card-img"
-                alt="UC Irvine Esports logo, which is an anteater curled inside a blue and white circle, on a blue and yellow gradient background."
+                alt="UC Irvine Esports app showing 3 different screens: PC availability, featured events, and editing a profile."
               />
               <div class="card-body">
                 <h3 class="card-title">
-                  <a href="casestudy2.html" class="stretched-link works-link"
+                  <a
+                    href="casestudy2.html"
+                    class="stretched-link works-link"
+                    aria-label="UC Irvine Esports App"
                     >UC Irvine Esports App</a
                   >
                 </h3>
@@ -131,16 +158,19 @@ EMAIL: sarahsl7@uci.edu
           </div>
 
           <!-- card #3 -->
-          <div class="col-12 col-md-6 mb-4">
+          <div class="col-12 col-md-6">
             <div class="card h-100 works-card">
               <img
                 src="RoomscapeApp.png"
                 class="card-img-top works-card-img"
-                alt="Two phones showing the Roomscape furniture shopping app: a login screen and a home screen with curated furniture recommendations."
+                alt="Roomscape app on two phones showing a login screen and a home screen with furniture recommendations."
               />
               <div class="card-body">
                 <h3 class="card-title">
-                  <a href="casestudy3.html" class="stretched-link works-link"
+                  <a
+                    href="casestudy3.html"
+                    class="stretched-link works-link"
+                    aria-label="Roomscape"
                     >Roomscape - AR Shopping Experience</a
                   >
                 </h3>
@@ -163,10 +193,11 @@ EMAIL: sarahsl7@uci.edu
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 mb-4 mb-md-0">
-            <h2 class="footer-heading">Thanks for stopping by!</h2>
+            <p class="footer-heading">Thanks for stopping by!</p>
             <a
               href="mailto:sarahsl7@uci.edu"
               class="btn btn-dark rounded-pill footer-btn"
+              aria-label="Say hello: email Sarah Lee"
               >Say hello!</a
             >
           </div>
@@ -176,15 +207,24 @@ EMAIL: sarahsl7@uci.edu
           >
             <div>
               <p class="label">Pages</p>
-              <ul class="list-unstyled">
-                <li><a href="#works" class="footer-link">Works</a></li>
-                <li><a href="about.html" class="footer-link">About</a></li>
+              <ul class="list-unstyled" aria-label="Pages">
+                <li>
+                  <a href="#works" class="footer-link" aria-label="Works"
+                    >Works</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html" class="footer-link" aria-label="About"
+                    >About</a
+                  >
+                </li>
                 <li>
                   <a
                     href="resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="footer-link"
+                    aria-label="Resume (opens in a new tab)"
                     >Resume</a
                   >
                 </li>
@@ -193,16 +233,20 @@ EMAIL: sarahsl7@uci.edu
 
             <div>
               <p class="label">Contact</p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" aria-label="Contact">
                 <li>
                   <a
                     href="https://www.linkedin.com/in/sarah-lee-271b3a2b9/?isSelfProfile=true"
                     class="footer-link"
+                    aria-label="LinkedIn"
                     >LinkedIn</a
                   >
                 </li>
                 <li>
-                  <a href="mailto:sarahsl7@uci.edu" class="footer-link"
+                  <a
+                    href="mailto:sarahsl7@uci.edu"
+                    class="footer-link"
+                    aria-label="Email Sarah Lee"
                     >Email</a
                   >
                 </li>
