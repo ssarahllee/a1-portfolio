@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+body {
+  font-family: "Inter", sans-serif;
+  padding-top: 90px;
+}
+
 .section {
   padding-top: 45px;
   padding-bottom: 45px;
 }
 
+.skip-link {
+  color: white;
+}
+
 .portfolio-nav {
-  padding: 24px;
+  padding: 20px;
   background-color: white;
   border-bottom: 1px;
   border-color: #ebebeb;
@@ -14,44 +23,46 @@
 }
 
 .nav-brand {
-  font-family: "Inter", sans-serif;
   font-size: 20px;
-  color: gray;
+  color: #595959;
   text-decoration: none;
 }
 
 .nav-brand:hover {
-  color: blueviolet;
+  color: #496d89;
 }
 
 .portfolio-nav .nav {
   display: flex;
   gap: 18px;
   justify-content: flex-end;
-  color: gray;
+  color: #595959;
 }
 
 .portfolio-nav .nav-link {
-  color: gray;
+  color: #595959;
 }
 
 .portfolio-nav .nav-link:hover {
-  color: blueviolet;
+  color: #496d89;
 }
 
 .top {
-  font-family: "Inter", sans-serif;
   color: black;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .top {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
 }
 
 .top h1 {
   color: black;
   font-size: 4em;
   font-weight: normal;
-  margin-bottom: 0.2em;
 }
 
 .description {
@@ -60,12 +71,15 @@
 }
 
 .label {
-  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
-  color: gray;
+  color: #595959;
   font-size: 0.85em;
   margin-bottom: 0.5em;
+}
+
+#works {
+  scroll-margin-top: 50px;
 }
 
 .works-card-img {
@@ -80,7 +94,11 @@
 }
 
 .works-card:hover {
-  border-color: blueviolet;
+  border-color: #496d89;
+}
+
+.works-card-img {
+  border: 0.25px solid rgba(128, 128, 128, 0.283);
 }
 
 .works-tag {
@@ -95,17 +113,17 @@
 }
 
 .card-body:hover .works-link {
-  color: blueviolet;
+  color: #496d89;
 }
 
 .card-body:hover .card-description {
-  color: blueviolet;
+  color: #496d89;
 }
 
 .profile-img {
-  width: 450px;
-  height: 450px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -129,7 +147,7 @@
 
 .footer {
   padding-top: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 24px;
   background-color: white;
   border-top: 1px;
   border-top-color: #ebebeb;
@@ -138,12 +156,12 @@
 
 .footer-heading {
   font-weight: normal;
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 3%;
 }
 
 .footer-btn:hover {
-  background-color: blueviolet;
+  background-color: #496d89;
 }
 
 .footer-link {
@@ -152,5 +170,32 @@
 }
 
 .footer-link:hover {
-  color: blueviolet;
+  color: #496d89;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  color: #595959;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  color: #496d89;
+}
+
+.cs-hero-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.cs-summary {
+  margin-bottom: 5%;
+  font-weight: normal;
+}
+
+.contact-form .form-label {
+  text-transform: uppercase;
 }

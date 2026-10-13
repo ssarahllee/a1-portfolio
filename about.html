@@ -22,11 +22,11 @@ EMAIL: sarahsl7@uci.edu
   <body>
     <!-- nav bar -->
     <header>
-      <nav class="portfolio-nav">
+      <nav class="navbar navbar-expand-md portfolio-nav fixed-top">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
-          <a href="index.html#home" class="nav-brand">SARAH LEE</a>
+          <a href="index.html" class="nav-brand">SARAH LEE</a>
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
@@ -39,6 +39,9 @@ EMAIL: sarahsl7@uci.edu
             </li>
             <li class="nav-item">
               <a class="nav-link" href="resume.pdf" target="_blank">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -71,7 +74,7 @@ EMAIL: sarahsl7@uci.edu
           <div class="col-12 col-md-4 text-center">
             <img
               src="headshot.png"
-              alt="Portrait of Sarah Lee"
+              alt="Portrait of Sarah Lee at the beach"
               class="img-fluid profile-img"
             />
           </div>
@@ -79,35 +82,41 @@ EMAIL: sarahsl7@uci.edu
       </section>
     </main>
     <!-- footer -->
-    <section>
-      <footer id="contact" class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <h2 class="footer-heading">Thanks for stopping by!</h2>
-              <a
-                href="mailto:sarahsl7@uci.edu"
-                class="btn btn-dark rounded-pill footer-btn"
-                >Say hello!</a
-              >
-            </div>
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <h2 class="footer-heading">Thanks for stopping by!</h2>
+            <a
+              href="mailto:sarahsl7@uci.edu"
+              class="btn btn-dark rounded-pill footer-btn"
+              >Say hello!</a
+            >
+          </div>
 
-            <div class="col-6 col-md-3">
+          <div
+            class="col-12 col-md-6 d-flex gap-5 justify-content-start justify-content-md-end"
+          >
+            <div>
               <p class="label">Pages</p>
               <ul class="list-unstyled">
                 <li>
                   <a href="index.html#works" class="footer-link">Works</a>
                 </li>
                 <li><a href="about.html" class="footer-link">About</a></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="resume.pdf" target="_blank"
+                <li>
+                  <a
+                    href="resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-link"
                     >Resume</a
                   >
                 </li>
               </ul>
             </div>
 
-            <div class="col-6 col-md-3">
+            <div>
               <p class="label">Contact</p>
               <ul class="list-unstyled">
                 <li>
@@ -126,7 +135,7 @@ EMAIL: sarahsl7@uci.edu
             </div>
           </div>
         </div>
-      </footer>
-    </section>
+      </div>
+    </footer>
   </body>
 </html>

@@ -17,22 +17,20 @@ EMAIL: sarahsl7@uci.edu
     />
     <link rel="stylesheet" href="index.css" />
     <!-- you would also link to Bootstrap here! -->
-    <title>Case Study 2 | Sarah Lee</title>
+    <title>UC Irvine Esports | Sarah Lee</title>
   </head>
   <body>
     <!-- nav bar -->
     <header>
-      <nav class="portfolio-nav">
+      <nav class="navbar navbar-expand-md portfolio-nav fixed-top">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
-          <a href="index.html#home" class="nav-brand">SARAH LEE</a>
+          <a href="index.html" class="nav-brand">SARAH LEE</a>
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html#works"
-                >Works</a
-              >
+              <a class="nav-link" aria-current="page" href="#works">Works</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -40,9 +38,101 @@ EMAIL: sarahsl7@uci.edu
             <li class="nav-item">
               <a class="nav-link" href="resume.pdf" target="_blank">Resume</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
+
+    <main class="container section">
+      <!-- hero -->
+      <img
+        src="UCIesports.png"
+        class="img-fluid cs-hero-img"
+        alt="UC Irvine Esports logo, which is an anteater curled inside a blue and white circle, on a blue and yellow gradient background."
+      />
+      <!-- back button -->
+      <a href="index.html#works" class="back-button"><- Works</a>
+      <h1 class="cs-title">UC Irvine Esports</h1>
+      <h4 class="cs-summary">
+        The official iOS and Android mobile app for UC Irvine Esports.
+      </h4>
+      <!-- introduction-->
+      <div class="row cs-intro">
+        <div class="col-6 col-md-3 mb-3">
+          <p class="label">My Role</p>
+          <p>UI/UX Design Lead</p>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <p class="label">Timeline</p>
+          <p>Jan 2026 - Jun 2026</p>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <p class="label">Status</p>
+          <p>MVP Shipped</p>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <p class="label">Tools</p>
+          <p>Figma, Mobile Design, iOS & Android</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <h2 class="footer-heading">Thanks for stopping by!</h2>
+            <a
+              href="mailto:sarahsl7@uci.edu"
+              class="btn btn-dark rounded-pill footer-btn"
+              >Say hello!</a
+            >
+          </div>
+
+          <div
+            class="col-12 col-md-6 d-flex gap-5 justify-content-start justify-content-md-end"
+          >
+            <div>
+              <p class="label">Pages</p>
+              <ul class="list-unstyled">
+                <li><a href="#works" class="footer-link">Works</a></li>
+                <li><a href="about.html" class="footer-link">About</a></li>
+                <li>
+                  <a
+                    href="resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-link"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="label">Contact</p>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/sarah-lee-271b3a2b9/?isSelfProfile=true"
+                    class="footer-link"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:sarahsl7@uci.edu" class="footer-link"
+                    >Email</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
