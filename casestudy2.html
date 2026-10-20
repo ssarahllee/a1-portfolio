@@ -19,11 +19,18 @@ EMAIL: sarahsl7@uci.edu
     <!-- you would also link to Bootstrap here! -->
     <title>Sarah Lee's UC Irvine Esports App Case Study</title>
   </head>
-  <body>
+  <body
+    class="cs-page"
+    data-bs-spy="scroll"
+    data-bs-target="#cs-sections"
+    data-bs-root-margin="-25% 0px -65% 0px"
+    data-bs-threshold="[0,0.05,0.1,0.5,1]"
+    tabindex="0"
+  >
     <!-- nav bar -->
     <header>
       <nav
-        class="navbar portfolio-nav fixed-top"
+        class="navbar portfolio-nav cs-nav fixed-top"
         aria-label="Sarah Lee, home page"
       >
         <div
@@ -63,36 +70,401 @@ EMAIL: sarahsl7@uci.edu
       </nav>
     </header>
 
-    <main class="container section">
-      <!-- hero -->
-      <img
-        src="UCIesports.png"
-        class="img-fluid cs-hero-img"
-        alt="UC Irvine Esports app showing 3 different screens: PC availability, featured events, and editing a profile."
-      />
-      <!-- back button -->
-      <a href="index.html#works" class="back-button"><- Works</a>
-      <h1 class="cs-title">UC Irvine Esports</h1>
-      <h2 class="cs-summary">
-        The official iOS and Android mobile app for UC Irvine Esports.
-      </h2>
-      <!-- introduction-->
-      <div class="row cs-intro">
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">My Role</p>
-          <p>UI/UX Design Lead</p>
+    <main id="main-content">
+      <!-- banner: full width, directly under the nav -->
+      <div class="cs-banner">
+        <img
+          src="UCIesports.png"
+          class="cs-banner-img"
+          alt="UC Irvine Esports app showing 3 different screens: PC availability, featured events, and editing a profile."
+        />
+      </div>
+
+      <!-- title, store links and quick facts -->
+      <div class="cs-header">
+        <div class="container">
+          <div class="row align-items-center g-3">
+            <div class="col-12 col-md-8">
+              <h1 class="cs-title">UC Irvine Esports</h1>
+              <p class="cs-summary">
+                The official iOS and Android mobile app for UC Irvine Esports.
+              </p>
+            </div>
+            <div
+              class="col-12 col-md-4 d-flex flex-wrap gap-2 justify-content-md-end"
+            >
+              <!-- replace each # with the real store link -->
+              <a
+                href="https://apps.apple.com/us/app/uc-irvine-esports/id6751213697"
+                target="_blank"
+                button
+                class="btn btn-outline-dark rounded-pill cs-store-btn"
+                >App Store</a
+              >
+              <a
+                href="https://play.google.com/store/apps/details?id=com.uci.esports&hl=en_US"
+                target="_blank"
+                class="btn btn-outline-dark rounded-pill cs-store-btn"
+                >Google Play</a
+              >
+            </div>
+          </div>
+
+          <div class="row cs-meta">
+            <div class="col-6 col-md-3 mb-3">
+              <p class="label">My Role</p>
+              <p>UI/UX Design Lead</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="label">Timeline</p>
+              <p>Jan 2026 - Jun 2026</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="label">Status</p>
+              <p>MVP Shipped</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="label">Skills / Tools</p>
+              <p class="mb-0">Figma</p>
+              <p class="mb-0">Mobile Design</p>
+              <p class="mb-0">iOS &amp; Android</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Timeline</p>
-          <p>Jan 2026 - Jun 2026</p>
-        </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Status</p>
-          <p>MVP Shipped</p>
-        </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Tools</p>
-          <p>Figma, Mobile Design, iOS & Android</p>
+      </div>
+
+      <!-- side nav + content -->
+      <div class="container cs-body">
+        <div class="row g-5">
+          <aside class="col-12 col-md-3 col-lg-2">
+            <div class="cs-side">
+              <a href="index.html#works" class="back-button">&larr; Works</a>
+              <nav
+                class="cs-sections"
+                id="cs-sections"
+                aria-label="Case study sections"
+              >
+                <ul
+                  class="list-unstyled d-flex flex-wrap flex-md-column flex-md-nowrap gap-3 gap-md-0"
+                >
+                  <li>
+                    <a href="#overview" class="cs-section-link">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#problem" class="cs-section-link">Problem</a>
+                  </li>
+                  <li>
+                    <a href="#solution" class="cs-section-link">Solution</a>
+                  </li>
+                  <li>
+                    <a href="#research" class="cs-section-link">Research</a>
+                  </li>
+                  <li>
+                    <a href="#constraints" class="cs-section-link"
+                      >Constraints</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#ideation" class="cs-section-link">Ideation</a>
+                  </li>
+                  <li><a href="#design" class="cs-section-link">Design</a></li>
+                  <li>
+                    <a href="#reflection" class="cs-section-link">Reflection</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="col-12 col-md-9 col-lg-8">
+            <!-- overview -->
+            <section id="overview" class="cs-section">
+              <p class="cs-eyebrow">Overview</p>
+              <h2>
+                Meet UC Irvine Esports — the first official esports program at a
+                public university.
+              </h2>
+              <p>
+                In 2016, the University of California, Irvine launched the
+                nation’s first official public university esports program.
+              </p>
+              <p>
+                Today, UC Irvine Esports offers varsity teams, scholarships,
+                community events, employment opportunities, and a dedicated
+                gaming arena.
+              </p>
+            </section>
+
+            <!-- problem -->
+            <section id="problem" class="cs-section">
+              <p class="cs-eyebrow">Problem</p>
+              <h2>Declining engagement & funding</h2>
+              <p>
+                Post-COVID, the program has seen a major drop in arena visits,
+                making it harder to maintain the same level of activity,
+                funding, and community presence it once had.
+              </p>
+              <p>
+                While UC Irvine Esports still offers valuable resources and
+                events, many students and community members are either unaware
+                of what the program provides or lack a convenient way to stay
+                connected.
+              </p>
+
+              <div class="cs-box">
+                <div class="row g-3">
+                  <div class="col-12 col-md-5"><h3>The Challenge</h3></div>
+                  <div class="col-12 col-md-7">
+                    <p>
+                      Create a companion mobile app for UC Irvine Esports to
+                      support initial discoverability, program visibility, and
+                      long-term engagement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="cs-box">
+                <div class="row g-3">
+                  <div class="col-12 col-md-5"><h3>Guiding Question</h3></div>
+                  <div class="col-12 col-md-7">
+                    <p>
+                      How do we build a mobile app that fosters the gaming
+                      community and encourages people to engage with UC Irvine
+                      Esports?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- solution -->
+            <section id="solution" class="cs-section">
+              <p class="cs-eyebrow">Solution</p>
+              <h2>A digital home for UC Irvine Esports.</h2>
+
+              <div class="row g-4 align-items-center cs-feature">
+                <div class="col-12 col-md-6">
+                  <h3>Real-Time Availability</h3>
+                  <p>
+                    Live operating status and PC availability across all
+                    stations, updated in real time
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-panel">
+                    <span>[Screenshot: feature one]</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4 align-items-center cs-feature">
+                <div class="col-12 col-md-6">
+                  <h3>Events Calendar</h3>
+                  <p>
+                    Browse upcoming events, register in-app, and track
+                    everything you've signed up for — all in one view.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-panel">
+                    <span>[Screenshot: feature two]</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4 align-items-center cs-feature">
+                <div class="col-12 col-md-6">
+                  <h3>Rewards Hub</h3>
+                  <p>
+                    Earn XP through arena visits and events to level up tiers
+                    and unlock rewards, prizes, and exclusive perks.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-panel">
+                    <span>[Screenshot: feature three]</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- research -->
+            <section id="research" class="cs-section">
+              <p class="cs-eyebrow">Research</p>
+              <h2>Getting to know my audience.</h2>
+              <p>Conducted 10+ interviews, surveys, and observations.</p>
+
+              <p class="cs-eyebrow cs-subeyebrow">User insights</p>
+              <div class="row g-4">
+                <div class="col-12 col-md-4">
+                  <h3>Students & Visitors</h3>
+                  <p class="label">Goal</p>
+                  <p>Access the arena and discover events without friction.</p>
+                  <hr class="cs-rule" />
+                  <p class="label">Pain points</p>
+                  <ul class="cs-pain list-unstyled">
+                    <li>
+                      No way to check arena availability or reserve a PC
+                      remotely
+                    </li>
+                    <li>Events are difficult to discover and easy to miss</li>
+                    <li>The program feels inaccessible to newcomers</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h3>Arena Staff</h3>
+                  <p class="label">Goal</p>
+                  <p>
+                    Keep operations running smoothly with fewer manual
+                    touchpoints.
+                  </p>
+                  <hr class="cs-rule" />
+                  <p class="label">Pain points</p>
+                  <ul class="cs-pain list-unstyled">
+                    <li>
+                      Constantly answering the same questions about arena
+                      logistics
+                    </li>
+                    <li>
+                      Walk-in traffic is unpredictable and difficult to manage
+                    </li>
+                    <li>
+                      No way to proactively communicate arena updates to
+                      visitors
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h3>Program Leaders</h3>
+                  <p class="label">Goal</p>
+                  <p>Analyze engagement and growth metrics.</p>
+                  <hr class="cs-rule" />
+                  <p class="label">Pain points</p>
+                  <ul class="cs-pain list-unstyled">
+                    <li>
+                      Low arena utilization makes it difficult to justify
+                      continued funding]
+                    </li>
+                    <li>
+                      No data to measure or demonstrate student engagement
+                    </li>
+                    <li>
+                      No digital presence to attract new students or grow the
+                      community
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- constraints -->
+            <section id="constraints" class="cs-section">
+              <p class="cs-eyebrow">Constraints</p>
+              <h2>Working with constraints.</h2>
+              <div class="row g-4">
+                <div class="col-12 col-md-6">
+                  <h3>GGLeap API</h3>
+                  <p>
+                    Because all live arena data lived inside GGLeap's system,
+                    every real-time feature depended on what their API could
+                    expose. This meant scoping features around API capabilities
+                    rather than user needs alone, and designing fallback states
+                    for data that wasn't reliably available.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h3>Stakeholder Approval</h3>
+                  <p>
+                    Design decisions needed to align with UC Irvine Esports
+                    leadership and their vision for the program. This meant
+                    navigating feedback cycles and balancing user needs with
+                    institutional priorities throughout the process.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ideation -->
+            <section id="ideation" class="cs-section">
+              <p class="cs-eyebrow">Ideation</p>
+              <h2>Exploring solutions & defining requirements.</h2>
+              <p>
+                Based on research insights, I translated user pain points into
+                concrete feature requirements. The goal was to identify features
+                that would address critical needs across all three user groups
+                while remaining feasible within project constraints.
+              </p>
+              <p>[How you grouped and prioritized ideas.]</p>
+              <div class="cs-panel cs-panel-wide">
+                <span>[Image: affinity diagram or brainstorm]</span>
+              </div>
+            </section>
+
+            <!-- design -->
+            <section id="design" class="cs-section">
+              <p class="cs-eyebrow">Design</p>
+              <h2>Bringing it onto the canvas.</h2>
+              <p>
+                Based on research insights, I translated user pain points into
+                concrete feature requirements. The goal was to identify features
+                that would address critical needs across all three user groups
+                while remaining feasible within project constraints.
+              </p>
+              <div class="cs-panel cs-panel-wide">
+                <span>[Image: final screens or design system]</span>
+              </div>
+            </section>
+
+            <!-- reflection -->
+            <section id="reflection" class="cs-section">
+              <p class="cs-eyebrow">Reflection</p>
+              <h2>Looking back</h2>
+              <h4>
+                My first time designing a product across design, development,
+                and leadership.
+              </h4>
+              <p>
+                This project taught me that designing a real product is not just
+                about creating polished screens. It is about aligning people,
+                priorities, and constraints around a shared direction. Because
+                the UCI Esports app involved leadership goals, developer
+                constraints, and many possible feature ideas, I learned how
+                important it is to communicate clearly, prioritize
+                intentionally, and design with implementation in mind.
+              </p>
+              <p>Here are my main learnings from this project:</p>
+
+              <div class="cs-box">
+                <h3>Design-Dev alignment needs to happen early.</h3>
+                <p>
+                  I learned that even strong mockups can lead to misalignment if
+                  design intent is not clearly documented. Platform-specific
+                  patterns, native components, and technical constraints can all
+                  affect the final product, so I learned the importance of
+                  clearer handoff specs, reusable components, and ongoing
+                  communication with developers.
+                </p>
+                <h3>
+                  Cross-functional collaboration means balancing different
+                  priorities.
+                </h3>
+                <p>
+                  This project involved feedback from leadership, marketing, HR,
+                  and mobile development. I learned how to translate broad
+                  organizational goals into product decisions while still
+                  keeping the user experience clear and focused.
+                </p>
+                <h3>Scope needs to be protected.</h3>
+                <p>
+                  Because the app could support so many areas of UCI Esports,
+                  the feature list grew quickly. I learned how important it is
+                  to prioritize the MVP around the features with the greatest
+                  user impact, technical feasibility, and value to the program’s
+                  immediate engagement goals.
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </main>
@@ -151,5 +523,15 @@ EMAIL: sarahsl7@uci.edu
         </div>
       </div>
     </footer>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // add a white background to the nav once the page has scrolled
+      var csNav = document.querySelector(".cs-nav");
+      function updateNav() {
+        csNav.classList.toggle("scrolled", window.scrollY > 10);
+      }
+      window.addEventListener("scroll", updateNav);
+      updateNav();
+    </script>
   </body>
 </html>
