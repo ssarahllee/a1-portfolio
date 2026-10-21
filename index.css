@@ -218,7 +218,9 @@ body {
 .cs-nav {
   background-color: transparent;
   border-bottom-color: transparent;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 .cs-nav.scrolled {
@@ -241,12 +243,11 @@ body {
 
 .cs-header {
   padding-top: 2.5rem;
-  border-bottom: 1px solid #ebebeb;
 }
 
 .cs-title {
   font-weight: normal;
-  font-size: 2.25rem;
+  font-size: 2rem;
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
 }
@@ -254,18 +255,22 @@ body {
 .cs-summary {
   color: #595959;
   font-weight: normal;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
-.cs-store-btn {
-  font-size: 0.9rem;
+.cs-store-badge {
+  display: block;
+  height: 48px;
+  width: auto;
 }
 
 .cs-meta {
   margin-top: 2rem;
   padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
   border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .cs-meta p {
@@ -296,10 +301,10 @@ body {
 }
 
 .cs-eyebrow {
-  margin-bottom: 0.75rem;
-  color: #496d89;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 227);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -318,11 +323,11 @@ body {
 }
 
 .cs-section h2 {
-  margin-bottom: 1.25rem;
-  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
   font-weight: normal;
   letter-spacing: -0.01em;
-  line-height: 1.25;
+  line-height: 1.375;
 }
 
 .cs-section h3 {
@@ -345,31 +350,81 @@ body {
 }
 
 .cs-box p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
-.cs-box h3:not(:first-child) {
-  margin-top: 1.5rem;
+.cs-content {
+  max-width: 944px;
 }
 
 .cs-feature {
-  margin-top: 2rem;
+  padding: 2.5rem 0;
+}
+
+.cs-feature p {
+  margin-bottom: 0;
+}
+
+.cs-feature + .cs-feature {
+  margin-top: 1rem;
+}
+
+.cs-feature .cs-panel {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.cs-feature .cs-panel span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cs-feature .cs-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.45);
+}
+
+/* each screenshot has its phone at a slightly different spot, so nudge it to the center */
+.cs-feature .cs-panel img.cs-shot-pc {
+  transform: translate(-6.4%, 12.7%) scale(1.45);
+}
+
+.cs-feature .cs-panel img.cs-shot-event {
+  transform: translate(0, 9.4%) scale(1.45);
+}
+
+.cs-feature .cs-panel img.cs-shot-rewards {
+  transform: translate(2.1%, 9.9%) scale(1.45);
 }
 
 .cs-panel {
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 260px;
-  border-radius: 16px;
-  background-color: #f8f9fa;
   color: #595959;
   text-align: center;
 }
 
 .cs-panel-wide {
-  margin-top: 1.5rem;
-  min-height: 320px;
+  display: block;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid #f5f5f5;
+  border-radius: 12px;
+}
+
+.cs-panel-wide span {
+  display: block;
+}
+
+.cs-panel-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .cs-rule {
@@ -390,7 +445,7 @@ body {
   content: "\2715" / "";
   position: absolute;
   left: 0;
-  color: #496d89;
+  color: rgb(0, 0, 227);
 }
 
 @media screen and (min-width: 768px) {
@@ -407,7 +462,7 @@ body {
   }
 
   .cs-section h2 {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
   }
 
   .cs-side {
@@ -427,7 +482,7 @@ body {
   }
 
   .cs-section-link.active {
-    border-left-color: #496d89;
+    border-left-color: rgb(0, 0, 227);
   }
 }
 
@@ -442,5 +497,53 @@ body {
 
   .cs-panel {
     min-height: 180px;
+  }
+}
+
+/* ---------- Case study page: text size and side margins ---------- */
+.cs-page {
+  font-size: 0.9375rem;
+}
+
+.cs-page .container {
+  --bs-gutter-x: 3rem;
+  max-width: 1180px;
+}
+
+.cs-page .nav-brand {
+  font-size: 1.15rem;
+}
+
+.cs-page .portfolio-nav .nav-link {
+  font-size: 0.9rem;
+}
+
+.cs-page .cs-title {
+  font-size: 2.1rem;
+}
+
+.cs-page .cs-summary {
+  font-size: 1rem;
+}
+
+.cs-page .cs-eyebrow {
+  font-size: 0.7rem;
+}
+
+.cs-page .cs-section h2 {
+  font-size: 1.625rem;
+}
+
+.cs-page .cs-section h3 {
+  font-size: 1.15rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cs-page .cs-title {
+    font-size: 2.75rem;
+  }
+
+  .cs-page .cs-section h2 {
+    font-size: 2.05rem;
   }
 }

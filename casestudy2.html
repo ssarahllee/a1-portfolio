@@ -91,40 +91,48 @@ EMAIL: sarahsl7@uci.edu
               </p>
             </div>
             <div
-              class="col-12 col-md-4 d-flex flex-wrap gap-2 justify-content-md-end"
+              class="col-12 col-md-4 d-flex flex-column align-items-start align-items-md-end gap-2"
             >
-              <!-- replace each # with the real store link -->
               <a
                 href="https://apps.apple.com/us/app/uc-irvine-esports/id6751213697"
                 target="_blank"
-                button
-                class="btn btn-outline-dark rounded-pill cs-store-btn"
-                >App Store</a
+                rel="noopener noreferrer"
               >
+                <img
+                  src="appstore-badge.png"
+                  class="cs-store-badge"
+                  alt="Download UC Irvine Esports on the App Store (opens in a new tab)"
+                />
+              </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.uci.esports&hl=en_US"
+                href="https://play.google.com/store/apps/details?id=com.uci.esports&amp;hl=en_US"
                 target="_blank"
-                class="btn btn-outline-dark rounded-pill cs-store-btn"
-                >Google Play</a
+                rel="noopener noreferrer"
               >
+                <img
+                  src="googleplay-badge.png"
+                  class="cs-store-badge"
+                  alt="Get UC Irvine Esports on Google Play (opens in a new tab)"
+                />
+              </a>
             </div>
           </div>
 
           <div class="row cs-meta">
             <div class="col-6 col-md-3 mb-3">
-              <p class="label">My Role</p>
-              <p>UI/UX Design Lead</p>
+              <p class="cs-eyebrow">My Role</p>
+              <p>Lead UI/UX Designer</p>
             </div>
             <div class="col-6 col-md-3 mb-3">
-              <p class="label">Timeline</p>
+              <p class="cs-eyebrow">Timeline</p>
               <p>Jan 2026 - Jun 2026</p>
             </div>
             <div class="col-6 col-md-3 mb-3">
-              <p class="label">Status</p>
+              <p class="cs-eyebrow">Status</p>
               <p>MVP Shipped</p>
             </div>
             <div class="col-6 col-md-3 mb-3">
-              <p class="label">Skills / Tools</p>
+              <p class="cs-eyebrow">Skills / Tools</p>
               <p class="mb-0">Figma</p>
               <p class="mb-0">Mobile Design</p>
               <p class="mb-0">iOS &amp; Android</p>
@@ -176,7 +184,7 @@ EMAIL: sarahsl7@uci.edu
             </div>
           </aside>
 
-          <div class="col-12 col-md-9 col-lg-8">
+          <div class="col-12 col-md-9 col-lg-9 cs-content">
             <!-- overview -->
             <section id="overview" class="cs-section">
               <p class="cs-eyebrow">Overview</p>
@@ -213,7 +221,9 @@ EMAIL: sarahsl7@uci.edu
 
               <div class="cs-box">
                 <div class="row g-3">
-                  <div class="col-12 col-md-5"><h3>The Challenge</h3></div>
+                  <div class="col-12 col-md-5">
+                    <h3><strong>The Challenge</strong></h3>
+                  </div>
                   <div class="col-12 col-md-7">
                     <p>
                       Create a companion mobile app for UC Irvine Esports to
@@ -225,7 +235,9 @@ EMAIL: sarahsl7@uci.edu
               </div>
               <div class="cs-box">
                 <div class="row g-3">
-                  <div class="col-12 col-md-5"><h3>Guiding Question</h3></div>
+                  <div class="col-12 col-md-5">
+                    <h3><strong>Guiding Question</strong></h3>
+                  </div>
                   <div class="col-12 col-md-7">
                     <p>
                       How do we build a mobile app that fosters the gaming
@@ -242,9 +254,9 @@ EMAIL: sarahsl7@uci.edu
               <p class="cs-eyebrow">Solution</p>
               <h2>A digital home for UC Irvine Esports.</h2>
 
-              <div class="row g-4 align-items-center cs-feature">
+              <div class="row gx-5 align-items-end cs-feature">
                 <div class="col-12 col-md-6">
-                  <h3>Real-Time Availability</h3>
+                  <h4>Real-Time Availability</h4>
                   <p>
                     Live operating status and PC availability across all
                     stations, updated in real time
@@ -252,14 +264,20 @@ EMAIL: sarahsl7@uci.edu
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="cs-panel">
-                    <span>[Screenshot: feature one]</span>
+                    <span
+                      ><img
+                        class="cs-shot-pc"
+                        src="pcavailability.png"
+                        alt="pc availability
+                      screen"
+                    /></span>
                   </div>
                 </div>
               </div>
 
-              <div class="row g-4 align-items-center cs-feature">
+              <div class="row gx-5 align-items-end cs-feature">
                 <div class="col-12 col-md-6">
-                  <h3>Events Calendar</h3>
+                  <h4>Events Calendar</h4>
                   <p>
                     Browse upcoming events, register in-app, and track
                     everything you've signed up for — all in one view.
@@ -267,14 +285,20 @@ EMAIL: sarahsl7@uci.edu
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="cs-panel">
-                    <span>[Screenshot: feature two]</span>
+                    <span
+                      ><img
+                        class="cs-shot-event"
+                        src="eventcalendar.png"
+                        alt="event calendar
+                      screen"
+                    /></span>
                   </div>
                 </div>
               </div>
 
-              <div class="row g-4 align-items-center cs-feature">
+              <div class="row gx-5 align-items-end cs-feature">
                 <div class="col-12 col-md-6">
-                  <h3>Rewards Hub</h3>
+                  <h4>Rewards Hub</h4>
                   <p>
                     Earn XP through arena visits and events to level up tiers
                     and unlock rewards, prizes, and exclusive perks.
@@ -282,7 +306,13 @@ EMAIL: sarahsl7@uci.edu
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="cs-panel">
-                    <span>[Screenshot: feature three]</span>
+                    <span
+                      ><img
+                        class="cs-shot-rewards"
+                        src="rewards.png"
+                        alt="rewards
+                      screen"
+                    /></span>
                   </div>
                 </div>
               </div>
@@ -394,9 +424,10 @@ EMAIL: sarahsl7@uci.edu
                 that would address critical needs across all three user groups
                 while remaining feasible within project constraints.
               </p>
-              <p>[How you grouped and prioritized ideas.]</p>
               <div class="cs-panel cs-panel-wide">
-                <span>[Image: affinity diagram or brainstorm]</span>
+                <span
+                  ><img src="affinitydiagram.png" alt="affinity diagram image"
+                /></span>
               </div>
             </section>
 
@@ -410,9 +441,9 @@ EMAIL: sarahsl7@uci.edu
                 that would address critical needs across all three user groups
                 while remaining feasible within project constraints.
               </p>
-              <div class="cs-panel cs-panel-wide">
+              <!-- <div class="cs-panel cs-panel-wide">
                 <span>[Image: final screens or design system]</span>
-              </div>
+              </div> -->
             </section>
 
             <!-- reflection -->
@@ -427,7 +458,7 @@ EMAIL: sarahsl7@uci.edu
                 This project taught me that designing a real product is not just
                 about creating polished screens. It is about aligning people,
                 priorities, and constraints around a shared direction. Because
-                the UCI Esports app involved leadership goals, developer
+                the UC Irvine Esports app involved leadership goals, developer
                 constraints, and many possible feature ideas, I learned how
                 important it is to communicate clearly, prioritize
                 intentionally, and design with implementation in mind.
@@ -435,7 +466,7 @@ EMAIL: sarahsl7@uci.edu
               <p>Here are my main learnings from this project:</p>
 
               <div class="cs-box">
-                <h3>Design-Dev alignment needs to happen early.</h3>
+                <h4>Design-Dev alignment needs to happen early.</h4>
                 <p>
                   I learned that even strong mockups can lead to misalignment if
                   design intent is not clearly documented. Platform-specific
@@ -444,23 +475,23 @@ EMAIL: sarahsl7@uci.edu
                   clearer handoff specs, reusable components, and ongoing
                   communication with developers.
                 </p>
-                <h3>
+                <h4>
                   Cross-functional collaboration means balancing different
                   priorities.
-                </h3>
+                </h4>
                 <p>
                   This project involved feedback from leadership, marketing, HR,
                   and mobile development. I learned how to translate broad
                   organizational goals into product decisions while still
                   keeping the user experience clear and focused.
                 </p>
-                <h3>Scope needs to be protected.</h3>
+                <h4>Scope needs to be protected.</h4>
                 <p>
-                  Because the app could support so many areas of UCI Esports,
-                  the feature list grew quickly. I learned how important it is
-                  to prioritize the MVP around the features with the greatest
-                  user impact, technical feasibility, and value to the program’s
-                  immediate engagement goals.
+                  Because the app could support so many areas of UC Irvine
+                  Esports, the feature list grew quickly. I learned how
+                  important it is to prioritize the MVP around the features with
+                  the greatest user impact, technical feasibility, and value to
+                  the program’s immediate engagement goals.
                 </p>
               </div>
             </section>
