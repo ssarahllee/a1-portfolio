@@ -547,3 +547,77 @@ body {
     font-size: 2.05rem;
   }
 }
+
+/* ---------- About page: art carousel ---------- */
+/* 120px from the content above (the about section already has 45px of bottom padding) */
+.art-section {
+  padding-top: 75px;
+  padding-bottom: 5rem;
+}
+
+.art-heading {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.art-text {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.art-carousel {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.art-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: art-scroll 85s linear infinite;
+}
+
+.art-track:hover {
+  animation-play-state: paused;
+}
+
+.art-track li {
+  flex: none;
+}
+
+.art-track img {
+  display: block;
+  width: 187px;
+  height: 249px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* moves exactly one copy of the images (plus one gap) to the left, then repeats */
+@keyframes art-scroll {
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+/* people who ask for less motion get a still strip they can scroll by hand */
+@media (prefers-reduced-motion: reduce) {
+  .art-track {
+    animation: none;
+  }
+
+  .art-track li[aria-hidden="true"] {
+    display: none;
+  }
+
+  .art-carousel {
+    overflow-x: auto;
+  }
+}
