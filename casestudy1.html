@@ -19,13 +19,17 @@ EMAIL: sarahsl7@uci.edu
     <!-- you would also link to Bootstrap here! -->
     <title>Sarah Lee's CareNiva Case Study</title>
   </head>
-  <body>
+  <body
+    class="cs-page"
+    data-bs-spy="scroll"
+    data-bs-target="#cs-sections"
+    data-bs-root-margin="-25% 0px -65% 0px"
+    data-bs-threshold="[0,0.05,0.1,0.5,1]"
+    tabindex="0"
+  >
     <!-- nav bar -->
     <header>
-      <nav
-        class="navbar portfolio-nav cs-nav fixed-top"
-        aria-label="Sarah Lee, home page"
-      >
+      <nav class="navbar portfolio-nav cs-nav fixed-top" aria-label="Main">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -33,13 +37,7 @@ EMAIL: sarahsl7@uci.edu
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="#works"
-                aria-label="Works"
-                >Works</a
-              >
+              <a class="nav-link" href="index.html#works" aria-label="Works">Works</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html" aria-label="About">About</a>
@@ -57,34 +55,682 @@ EMAIL: sarahsl7@uci.edu
         </div>
       </nav>
     </header>
-    <main class="container section">
-      <!-- hero -->
-      <img
-        src="CareNiva.png"
-        class="img-fluid cs-hero-img"
-        alt="Dashboard of the CareNiva AI data agent conversational bot."
-      />
-      <!-- back button -->
-      <a href="index.html#works" class="back-button"><- Works</a>
-      <h1 class="cs-title">CareNiva Inc.</h1>
-      <h2 class="cs-summary">
-        An AI-powered data agent that simplifies complex healthcacre datasets,
-        enabling nontechnical users to search, analyze, and turn provider
-        information into actionable items.
-      </h2>
-      <!-- introduction-->
-      <div class="row cs-intro">
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">My Role</p>
-          <p>UX Designer & Data Analyst</p>
+
+    <main id="main-content">
+      <!-- banner: full width, directly under the nav -->
+      <div class="cs-banner cs-banner-careniva">
+        <img
+          src="CareNiva.png"
+          class="cs-banner-img"
+          alt="The CareNiva data agent: a chat pane answering how many acute care providers are in Orange County, next to a workspace table of 81 providers found."
+        />
+      </div>
+
+      <!-- title, links and quick facts -->
+      <div class="cs-header">
+        <div class="container">
+          <div class="row align-items-center g-3">
+            <div class="col-12 col-md-8">
+              <h1 class="cs-title">Making 2M+ Provider Records Conversational</h1>
+              <p class="cs-summary">
+                A chat tool that turns the nationwide NPPES provider registry
+                into plain-English answers and clean exports.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="row cs-meta">
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">My Role</p>
+              <p>UX Design & Data Analyst Intern</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">Timeline</p>
+              <p class="mb-0">Summer 2026</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">Status</p>
+              <p>Live web app</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">Skills / Tools</p>
+              <p class="mb-0">Python, DuckDB</p>
+              <p class="mb-0">OpenAI Agents SDK</p>
+              <p class="mb-0">Streamlit, GitHub Actions</p>
+              <p class="mb-0">Google Sheets &amp; Excel</p>
+              <p class="mb-0">Figma</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Timeline</p>
-          <p>Jun 2026 - Sep 2026</p>
-        </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Tools</p>
-          <p>SQL, Python, Codex</p>
+      </div>
+
+      <!-- side nav + content -->
+      <div class="container cs-body">
+        <div class="row g-5">
+          <aside class="col-12 col-md-3 col-lg-2">
+            <div class="cs-side">
+              <a href="index.html#works" class="back-button">&larr; Works</a>
+              <nav
+                class="cs-sections"
+                id="cs-sections"
+                aria-label="Case study sections"
+              >
+                <ul
+                  class="list-unstyled d-flex flex-wrap flex-md-column flex-md-nowrap gap-3 gap-md-0"
+                >
+                  <li><a href="#overview" class="cs-section-link">Overview</a></li>
+                  <li><a href="#problem" class="cs-section-link">Problem</a></li>
+                  <li><a href="#research" class="cs-section-link">Research</a></li>
+                  <li><a href="#discovery" class="cs-section-link">Discovery</a></li>
+                  <li><a href="#principles" class="cs-section-link">Principles</a></li>
+                  <li><a href="#solution" class="cs-section-link">Solution</a></li>
+                  <li><a href="#decisions" class="cs-section-link">Decisions</a></li>
+                  <li><a href="#iteration" class="cs-section-link">Iteration</a></li>
+                  <li><a href="#results" class="cs-section-link">Results</a></li>
+                  <li><a href="#reflection" class="cs-section-link">Reflection</a></li>
+                </ul>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="col-12 col-md-9 col-lg-9 cs-content">
+            <!-- overview -->
+            <section id="overview" class="cs-section">
+              <p class="cs-eyebrow">Overview</p>
+              <h2>
+                I turned a roughly 10 GB federal provider file into a chat tool
+                that a non-technical teammate can query in plain English and
+                export from in about five seconds.
+              </h2>
+              <p>
+                <strong>Shipped:</strong> a live web app, a self-updating data
+                pipeline, and 555+ automated tests. The live app is a tool for internal use.
+              </p>
+
+              <div class="row g-4 cs-stats">
+                <div class="col-12 col-md-4">
+                  <p class="cs-stat-number">2.18M</p>
+                  <p class="cs-stat-label">
+                    individual practitioner records in the nationwide pipeline,
+                    rebuilt automatically every month
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="cs-stat-number">6</p>
+                  <p class="cs-stat-label">
+                    locations comparable side by side in one question
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="cs-stat-number">SQL</p>
+                  <p class="cs-stat-label">
+                    needed to filter by city, county, ZIP, specialty, provider
+                    name, or update year
+                  </p>
+                </div>
+              </div>
+
+              <h3 class="cs-subhead">My role</h3>
+              <p>
+                I worked as both the designer and the analyst, so I could shape
+                the experience and the data behind it together. 
+              </p>
+              <ul class="cs-bullets">
+                <li>
+                  <strong>Experience design:</strong> the split-pane layout,
+                  chat and workspace behavior, error and caveat messaging,
+                  export flow
+                </li>
+                <li>
+                  <strong>Data design:</strong> the pipeline that merges NPPES,
+                  NUCC taxonomy, and FIPS county data into one database
+                </li>
+                <li>
+                  <strong>Agent design:</strong> which questions the agent can
+                  answer, how it handles ambiguity, and what it is forbidden to
+                  do
+                </li>
+              </ul>
+              <p>
+                <strong>Team:</strong> 1 other intern, Supervisor
+              </p>
+            </section>
+
+            <!-- problem -->
+            <section id="problem" class="cs-section">
+              <p class="cs-eyebrow">Problem</p>
+              <h2>Every provider question started with a script.</h2>
+              <p>
+                CareNiva is a telehealth solutions provider. It is not a care
+                provider; it is the software that lets its customers deliver
+                virtual care to their own patients. The platform serves clients
+                in 18 states, recorded 25,000 visits in 2026, and supports
+                urgent care, multi-specialty, and wellness practices. Their clientbase is composed of independent healthcare providers interested in telehealth solutions. For outreach purposes, the team
+                wanted to reach Southern California providers, which meant building lists gathering their public contact data.
+              </p>
+              <p>
+                The best source is the NPPES registry, the CMS database that
+                assigns every US provider a unique NPI. It is free and current,
+                but it is a single raw CSV of roughly 8 to 11 GB. Answering
+                even a simple question meant loading it by hand, filtering it,
+                and joining it to a separate NUCC taxonomy sheet to translate
+                specialty codes into readable names.
+              </p>
+              <p>
+                Doing the outreach research by hand first showed me exactly what
+                a tool would need to handle, and where the data would mislead
+                people.
+              </p>
+
+              <div class="cs-box">
+                <div class="row g-3">
+                  <div class="col-12 col-md-5">
+                    <h3><strong>Guiding Question</strong></h3>
+                  </div>
+                  <div class="col-12 col-md-7">
+                    <p>
+                      How might we let a non-technical teammate ask a question
+                      about providers and get a trustworthy answer, plus a
+                      clean dataset, without learning SQL or taxonomy codes?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- research -->
+            <section id="research" class="cs-section">
+              <p class="cs-eyebrow">Research</p>
+              <h2>Before the agent: three weeks of doing it by hand.</h2>
+              <p>
+                I built the first outreach lists myself, in three weekly passes
+                in July 2026. I did this deliberately: I could not design
+                guardrails for data I had not wrestled with.
+              </p>
+
+              <div class="row g-4 cs-steps">
+                <div class="col-12 col-md-4">
+                  <p class="cs-eyebrow">Week of July 6</p>
+                  <h3>Build the dataset key</h3>
+                  <p>
+                    I filtered the raw NPPES file to Southern California, kept
+                    individual providers flagged as sole proprietors with no
+                    parent organization, and translated taxonomy codes into
+                    specialty names. That produced 176,921 Southern California
+                    records, 28,201 of them in Orange County.
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="cs-eyebrow">Week of July 14</p>
+                  <h3>Build the category key</h3>
+                  <p>
+                    I read the 883-code NUCC taxonomy and sorted it into
+                    Medical, Mental Health, and Wellness based on which
+                    providers could work with a telehealth platform. I excluded
+                    groups that need in-person care, such as labs, pharmacy,
+                    and vision. I removed school-based specialties by hand and
+                    color-coded the priority groups.
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="cs-eyebrow">Week of July 20</p>
+                  <h3>Patch the gaps</h3>
+                  <p>
+                    The lists had no street addresses, so I wrote a second
+                    script to join back to the original file by NPI, then
+                    rebuilt every categorized tab as a "v.2". I also added a
+                    flag-reference tab per category with conditional
+                    formatting.
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                It worked, but it was fragile. The research lives in five
+                workbooks with 25 tabs, several marked "v.2" or "OLD - DELETE."
+              </p>
+
+              <div class="cs-panel cs-panel-wide cs-todo-panel">
+                <span
+                  ><mark class="cs-todo">TODO: add a screenshot of the color-coded category tabs here (images/00-manual-category-key.png)</mark></span
+                >
+              </div>
+
+              <h3 class="cs-subhead">The category key I built by hand</h3>
+              <div class="table-responsive cs-table-wrap">
+                <table class="table cs-table">
+                  <thead>
+                    <tr><th scope="col">Category</th><th scope="col">Taxonomy codes kept</th><th scope="col">Classifications ranked</th><th scope="col">Southern California providers</th><th scope="col">Orange County providers</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Medical</th><td>260</td><td>38</td><td>26,536</td><td>4,314</td></tr>
+                    <tr><th scope="row">Mental Health</th><td>60</td><td>12</td><td>62,404</td><td>10,626</td></tr>
+                    <tr><th scope="row">Wellness</th><td>42</td><td>13</td><td>12,788</td><td>2,496</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="cs-after-table">
+                Every classification got a High, Medium, or Low priority for
+                telehealth. Of 83,873 individual providers in Orange County,
+                28,201 (34%) were flagged as sole proprietors, and 17,436
+                Orange County records matched one of the three categories.
+              </p>
+
+              <h3 class="cs-subhead">What the manual work exposed</h3>
+              <div class="table-responsive cs-table-wrap">
+                <table class="table cs-table">
+                  <thead>
+                    <tr><th scope="col">Blind spot</th><th scope="col">What it meant for the tool</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">"Independent" is not a field. NPPES cannot say whether a provider works for a health system, so I used sole-proprietor status with no parent organization as a stand-in.</th><td>Every count states that it covers independent providers only.</td></tr>
+                    <tr><th scope="row">NPPES has no email addresses and cannot confirm a license.</th><td>The tool says what it cannot tell you; verification stays a separate step before outreach.</td></tr>
+                    <tr><th scope="row">ZIP prefixes 90 to 92 are a blunt stand-in for a region. My "Southern California" file held 14,804 San Diego records and 4,502 Riverside records.</th><td>Search by city, county, or ZIP, backed by a ZIP-to-county crosswalk.</td></tr>
+                    <tr><th scope="row">Every category was my judgment call about telehealth fit.</th><td>A Help tab shows the full taxonomy, and everyday words like "therapist" map to official classifications.</td></tr>
+                    <tr><th scope="row">Each new question meant a new script and a new set of tabs.</th><td>One database, rebuilt monthly, queried by chat.</td></tr>
+                    <tr><th scope="row">A provider with several specialties is sorted by the first listed one only.</th><td>Still open; listed under limitations.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="cs-after-table">
+                The manual phase was the research. The agent is what I built
+                from it.
+              </p>
+            </section>
+
+            <!-- discovery -->
+            <section id="discovery" class="cs-section">
+              <p class="cs-eyebrow">Discovery</p>
+              <h2>
+                The data had six traps, and each became a design requirement.
+              </h2>
+              <p>
+                The manual work showed where the data hurts. Next I tested the
+                obvious shortcuts for a tool, and every dead end shaped the
+                product.
+              </p>
+              <div class="table-responsive cs-table-wrap">
+                <table class="table cs-table">
+                  <thead>
+                    <tr><th scope="col">What I found</th><th scope="col">What it meant for the design</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">The CMS NPPES API stops at about 1,200 records</th><td>It cannot support bulk questions, so the product needs its own database</td></tr>
+                    <tr><th scope="row">The registry has no county field</th><td>Build a ZIP-to-county crosswalk so "Orange County" is searchable</td></tr>
+                    <tr><th scope="row">Specialties are 10-character taxonomy codes</th><td>Map everyday words ("chiro", "therapist", "foot doctor") to official classifications</td></tr>
+                    <tr><th scope="row">Names and places are ambiguous ("Orange" is a city and a county; "Springfield" is in many states)</th><td>The agent must ask, not guess</td></tr>
+                    <tr><th scope="row">The raw file carries many columns a simple lookup never needs</th><td>Show only name, location, specialty, address, phone, and last update</td></tr>
+                    <tr><th scope="row">The file is republished monthly</th><td>Rebuild the database automatically so no one downloads anything</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-box">
+                <p>
+                  <mark class="cs-todo">TODO: if you spoke with teammates or watched anyone use the earlier scripts, add two or three of their words here. Real user voices are the strongest proof in a case study.</mark>
+                </p>
+              </div>
+            </section>
+
+            <!-- principles -->
+            <section id="principles" class="cs-section">
+              <p class="cs-eyebrow">Principles</p>
+              <h2>Four principles for a tool people have to trust.</h2>
+              <p>
+                A wrong provider count in a healthcare directory is worse than
+                no answer. These principles guided every decision below.
+              </p>
+              <div class="row g-3 cs-principles">
+                <div class="col-12 col-md-6">
+                  <div class="cs-box cs-box-flush">
+                    <p class="cs-eyebrow">Principle 1</p>
+                    <h3>Accuracy over fluency.</h3>
+                    <p>
+                      The language model interprets the question; deterministic
+                      code produces the answer.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-box cs-box-flush">
+                    <p class="cs-eyebrow">Principle 2</p>
+                    <h3>Ask in chat, verify in a workspace.</h3>
+                    <p>
+                      Anyone can type a question, but they should always be able
+                      to inspect the rows behind the number.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-box cs-box-flush">
+                    <p class="cs-eyebrow">Principle 3</p>
+                    <h3>State what a number leaves out.</h3>
+                    <p>
+                      Every count carries its scope, such as "independent
+                      providers only."
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-box cs-box-flush">
+                    <p class="cs-eyebrow">Principle 4</p>
+                    <h3>Ask instead of guessing.</h3>
+                    <p>
+                      When a city, specialty, or name is ambiguous, the agent
+                      asks a clarifying question.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- solution -->
+            <section id="solution" class="cs-section">
+              <p class="cs-eyebrow">Solution</p>
+              <h2>Ask on the left, verify on the right.</h2>
+              <p>
+                The app is a split-pane workspace. On the left, a chat accepts
+                natural-language questions and answers with a short summary and
+                a table. On the right, a workspace shows the full result as a
+                sortable table or bar chart, and exports it as CSV, Excel, or
+                JSON.
+              </p>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-panel-diagram">
+                  <span><img src="careniva/architecture.svg" alt="System architecture: a monthly build merges NPPES, NUCC taxonomy, and HUD/FIPS data into one DuckDB file; each question flows from the user to the agent, to code that cleans and validates, to SQL, to two panes." /></span>
+                </div>
+                <figcaption class="cs-caption">How the system works: a monthly build feeds one database, and every question flows through the agent to deterministic code.</figcaption>
+              </figure>
+              <p class="cs-after-table">
+                The language model only interprets the question and picks a
+                tool. Cleaning, validation, SQL, and the summary are code, so
+                the same question returns the same answer every time.
+              </p>
+            </section>
+
+            <!-- decisions -->
+            <section id="decisions" class="cs-section">
+              <p class="cs-eyebrow">Decisions</p>
+              <h2>Six decisions that made the numbers trustworthy.</h2>
+              <div class="row g-4 cs-decisions">
+                <div class="col-12 col-md-6">
+                  <div class="cs-decision">
+                    <p class="cs-eyebrow">Decision 1</p>
+                    <h3>Let the model route, never write the answer.</h3>
+                    <p>
+                      Early on, model-written summaries were inconsistent and
+                      sometimes invented details. I moved the summary and table
+                      formatting into structured, deterministic flows, so the
+                      model's only job is to understand the question and call
+                      the right tool. <strong>Trade-off:</strong> answers sound
+                      less conversational, and I accepted that for accuracy.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-decision">
+                    <p class="cs-eyebrow">Decision 2</p>
+                    <h3>Stop the agent from dropping the specialty.</h3>
+                    <p>
+                      In comparison questions, the model could drop the
+                      specialty filter and return counts for every provider
+                      type. I gave comparisons their own schema parameters so
+                      the filter is always required, and regression tests check
+                      that the specialty survives.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-decision">
+                    <p class="cs-eyebrow">Decision 3</p>
+                    <h3>Say no to the questions that break the tool.</h3>
+                    <p>
+                      Whole-state comparisons (California vs. Texas) sent the
+                      agent into repeated retries that exhausted its context
+                      window. I blocked them explicitly and capped comparisons
+                      at six locations. <strong>Trade-off:</strong> less
+                      flexibility, but the tool stays fast and predictable.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-decision">
+                    <p class="cs-eyebrow">Decision 4</p>
+                    <h3>Ask when a place or name is ambiguous.</h3>
+                    <p>
+                      "Orange" is both a city and a county, and "Springfield"
+                      exists in many states. Instead of guessing, the agent
+                      lists the top six candidates by population, names the
+                      ones it left out, and asks the user to pick. My tests
+                      showed why: "therapists in Orange" returned 588 for the
+                      city, while "Orange County" returned 6,404.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-decision">
+                    <p class="cs-eyebrow">Decision 5</p>
+                    <h3>Put the caveat next to the number.</h3>
+                    <p>
+                      A count is only useful if you know what it covers. Every
+                      result states its scope, such as "independent providers
+                      only." Comparisons also warn users not to add column
+                      totals when one place sits inside another, like Irvine
+                      inside Orange County.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-decision">
+                    <p class="cs-eyebrow">Decision 6</p>
+                    <h3>Design the export around browser limits.</h3>
+                    <p>
+                      Streamlit cannot start a background job after a click, so
+                      downloading needs a "Prepare export" step first. I kept
+                      that step, disabled the button once the file is ready to
+                      avoid confusion, and capped exports at 100,000 rows so
+                      large searches cannot crash the browser.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- iteration -->
+            <section id="iteration" class="cs-section">
+              <p class="cs-eyebrow">Iteration</p>
+              <h2>From gray boxes to a working tool.</h2>
+              <p>
+                I designed in layers: layout first, then behavior, then polish.
+                Each round of screenshots below came from testing the build with
+                real queries.
+              </p>
+
+              <h3 class="cs-subhead">Wireframe: settle the structure</h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide ">
+                  <span><img src="careniva/01-wireframe.png" alt="Low-fidelity wireframe with a chat pane on the left and a search-criteria summary, data table, and export bar on the right" /></span>
+                </div>
+                <figcaption class="cs-caption">The split-pane idea started here: chat on the left, evidence on the right, export always in reach.</figcaption>
+              </figure>
+
+              <h3 class="cs-subhead">First build: prove it works</h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide ">
+                  <span><img src="careniva/03-first-build.png" alt="First working build with chat on the left and a workspace table with a preview-rows slider on the right" /></span>
+                </div>
+                <figcaption class="cs-caption">The first working version answered correctly but felt cluttered, and the preview slider was awkward for choosing a small number of rows.</figcaption>
+              </figure>
+
+              <h3 class="cs-subhead">Add a chart and tame the workspace</h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide ">
+                  <span><img src="careniva/04-bar-chart.png" alt="Bar chart tab with a group-by dropdown" /></span>
+                </div>
+                <figcaption class="cs-caption">A bar chart tab with a group-by dropdown lets people see the specialty mix behind a count. I replaced the slider with a dropdown and fixed scrolling so each pane scrolls on its own.</figcaption>
+              </figure>
+
+              <h3 class="cs-subhead">Fix export and add safeguards</h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide ">
+                  <span><img src="careniva/05-export-and-safeguards.png" alt="Workspace with a Prepare Export button, file format dropdown, and warnings about independent providers and California-only data" /></span>
+                </div>
+                <figcaption class="cs-caption">Export got its prepare-then-download flow, and each result got visible scope warnings.</figcaption>
+              </figure>
+
+              <h3 class="cs-subhead">Polish the conversation</h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide ">
+                  <span><img src="careniva/06-chat-polish.png" alt="Chat pane showing orange user messages, model name and response time under each answer, and a message input" /></span>
+                </div>
+                <figcaption class="cs-caption">Orange user bubbles, the model name, and response time (about 5 seconds) make the system’s behavior visible.</figcaption>
+              </figure>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-panel-narrow">
+                  <span><img src="careniva/07-follow-up-suggestions.png" alt="Chat on a narrow screen with a "You might also ask" list of follow-up questions" /></span>
+                </div>
+                <figcaption class="cs-caption">Follow-up suggestions teach people what the tool can do. The narrow view reflects my goal of tablet and phone support.</figcaption>
+              </figure>
+            </section>
+
+            <!-- results -->
+            <section id="results" class="cs-section">
+              <p class="cs-eyebrow">Results</p>
+              <h2>14 real questions, 555+ automated checks.</h2>
+              <p>
+                I tested the agent with 14 questions written in everyday
+                language, including vague ones. These are the ones that taught
+                me the most.
+              </p>
+              <div class="table-responsive cs-table-wrap">
+                <table class="table cs-table">
+                  <thead>
+                    <tr><th scope="col">Question</th><th scope="col">Answer</th><th scope="col">What it proves</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">"How many therapists are in orange?"</th><td>588 (Orange city)</td><td>Reads a bare place name as a city</td></tr>
+                    <tr><th scope="row">"...in orange county, CA?"</th><td>6,404</td><td>Distinguishes county from city</td></tr>
+                    <tr><th scope="row">"...in orange county?" (no state)</th><td>6,404</td><td>Defaults to California when state is missing</td></tr>
+                    <tr><th scope="row">"...in Austin, Texas?"</th><td>3,343</td><td>Works for any city, state</td></tr>
+                    <tr><th scope="row">"...in Los Angeles and Irvine?"</th><td>6,412 vs. 465</td><td>Compares two cities side by side</td></tr>
+                    <tr><th scope="row">"...therapists in Corona, CA?"</th><td>216</td><td>Maps "therapist" to four official classifications</td></tr>
+                    <tr><th scope="row">"Mental health providers in Orange County, with classification therapist"</th><td>6,571</td><td>Combines category and classification filters</td></tr>
+                    <tr><th scope="row">"Mental health counselors in zip 92881"</th><td>6</td><td>Handles ZIP code searches</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="cs-after-table">
+                Behind the app, 555+ automated tests guard the risky parts: SQL
+                injection prevention, wildcard escaping, specialty retention,
+                overlap detection between nested places, and isolation of each
+                user's API key.
+              </p>
+
+              <div class="row g-4 cs-results-cards">
+                <div class="col-12 col-md-6">
+                  <div class="cs-box cs-box-flush">
+                    <h3>Cross-check against my manual work</h3>
+                    <p>
+                      The agent counts 10,614 mental health providers in Orange
+                      County, and my hand-built Orange County mental health
+                      sheet has 10,626. A 12-record gap (0.1%) gives me
+                      confidence in both.
+                      <mark class="cs-todo">TODO: confirm both used the same NPPES release; if not, that likely explains the gap</mark>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cs-box cs-box-flush">
+                    <h3>Before and after</h3>
+                    <p>
+                      The manual route took three weekly passes to produce
+                      category lists for Orange County and Southern California.
+                      Now a new slice, such as a different city, county, or
+                      specialty, is a question instead of a script.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cs-box">
+                <h3>Outcomes at CareNiva</h3>
+                <p>
+                  <mark class="cs-todo">TODO: add what happened after launch. Who used it? How many searches or exports? What did it replace, and how much time did it save? Even one honest sentence or a quote from a teammate beats a guess.</mark>
+                </p>
+              </div>
+            </section>
+
+            <!-- reflection -->
+            <section id="reflection" class="cs-section">
+              <p class="cs-eyebrow">Reflection</p>
+              <h2>What I learned, and what is still open.</h2>
+
+              <div class="cs-box">
+                <h3>Trust is the real interface.</h3>
+                <p>
+                  In a data tool, the hardest UX problem was not the layout. It
+                  was making sure a person could believe the number, so I spent
+                  more time on scope labels, ambiguity handling, and guardrails
+                  than on visuals.
+                </p>
+                <h3>Constraints are a design material.</h3>
+                <p>
+                  Every "no" (no whole-state comparisons, capped exports) made
+                  the tool faster and more predictable. The agent got better
+                  when I gave it less freedom.
+                </p>
+                <h3>Data design is UX design.</h3>
+                <p>
+                  County search, plain-language specialties, and a pre-joined
+                  database were backend work, but they decided what questions
+                  people could ask at all.
+                </p>
+              </div>
+
+              <div class="row g-4 cs-open">
+                <div class="col-12 col-md-6">
+                  <h3 class="cs-subhead">Known limitations</h3>
+                  <ul class="cs-bullets">
+                    <li>
+                      The live app covers California; the nationwide dataset
+                      currently runs only locally.
+                    </li>
+                    <li>
+                      I have not yet tested how the agent handles typos and
+                      unusual phrasing.
+                    </li>
+                    <li>
+                      Asking for tables by whole wellness or medical category
+                      still has open bugs.
+                    </li>
+                    <li>
+                      Multi-location results can be inconsistent when specialty
+                      aliases differ.
+                    </li>
+                    <li>
+                      Each provider is categorized by their first listed
+                      specialty only.
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h3 class="cs-subhead">Next steps</h3>
+                  <ul class="cs-bullets">
+                    <li>
+                      Run usability sessions with teammates and measure task
+                      time against the old script workflow
+                    </li>
+                    <li>
+                      Release the nationwide dataset through GitHub releases so
+                      the hosted app can use it
+                    </li>
+                    <li>Add an interactive map of providers and search by month</li>
+                    <li>Make the interface fully usable on tablets and phones</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </main>
@@ -108,7 +754,7 @@ EMAIL: sarahsl7@uci.edu
             <div>
               <p class="label">Pages</p>
               <ul class="list-unstyled" aria-label="Pages">
-                <li><a href="#works" class="footer-link">Works</a></li>
+                <li><a href="index.html#works" class="footer-link">Works</a></li>
                 <li><a href="about.html" class="footer-link">About</a></li>
                 <li>
                   <a
@@ -143,6 +789,7 @@ EMAIL: sarahsl7@uci.edu
         </div>
       </div>
     </footer>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
       <script src="nav.js"></script>
   </body>
 </html>
