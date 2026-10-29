@@ -140,12 +140,12 @@ EMAIL: sarahsl7@uci.edu
               <p class="cs-eyebrow">Overview</p>
               <h2>
                 I turned a roughly 10 GB federal provider file into a chat tool
-                that a non-technical teammate can query in plain English and
+                that a non-technical employee can query in plain English and
                 export from in about five seconds.
               </h2>
               <p>
                 <strong>Shipped:</strong> a live web app, a self-updating data
-                pipeline, and 555+ automated tests. The live app is a tool for internal use.
+                pipeline, and 555+ automated tests. The live app is a tool for the CareNiva team's internal use.
               </p>
 
               <div class="row g-4 cs-stats">
@@ -193,7 +193,7 @@ EMAIL: sarahsl7@uci.edu
                 </li>
               </ul>
               <p>
-                <strong>Team:</strong> 1 other intern, Supervisor
+                <strong>Team:</strong> 2 interns, 1 Supervisor
               </p>
             </section>
 
@@ -210,9 +210,9 @@ EMAIL: sarahsl7@uci.edu
                 wanted to reach Southern California providers, which meant building lists gathering their public contact data.
               </p>
               <p>
-                The best source is the NPPES registry, the CMS database that
-                assigns every US provider a unique NPI. It is free and current,
-                but it is a single raw CSV of roughly 8 to 11 GB. Answering
+                The best source is the NPPES (National Plan and Provider Enumeration System) registry, which is the federal CMS (Center for Medicare & Medicaid Services) database that
+                assigns every US provider a unique NPI (National Provider Identifier). It is free and current,
+                but it is a single raw CSV file of roughly 8 to 11 GB. Answering
                 even a simple question meant loading it by hand, filtering it,
                 and joining it to a separate NUCC taxonomy sheet to translate
                 specialty codes into readable names.
@@ -279,7 +279,7 @@ EMAIL: sarahsl7@uci.edu
                   <p>
                     The lists had no street addresses, so I wrote a second
                     script to join back to the original file by NPI, then
-                    rebuilt every categorized tab as a "v.2". I also added a
+                    rebuilt every categorized tab. I also added a
                     flag-reference tab per category with conditional
                     formatting.
                   </p>
@@ -364,11 +364,6 @@ EMAIL: sarahsl7@uci.edu
                     <tr><th scope="row">The file is republished monthly</th><td>Rebuild the database automatically so no one downloads anything</td></tr>
                   </tbody>
                 </table>
-              </div>
-              <div class="cs-box">
-                <p>
-                  <mark class="cs-todo">TODO: if you spoke with teammates or watched anyone use the earlier scripts, add two or three of their words here. Real user voices are the strongest proof in a case study.</mark>
-                </p>
               </div>
             </section>
 
@@ -634,9 +629,7 @@ EMAIL: sarahsl7@uci.edu
                       The agent counts 10,614 mental health providers in Orange
                       County, and my hand-built Orange County mental health
                       sheet has 10,626. A 12-record gap (0.1%) gives me
-                      confidence in both.
-                      <mark class="cs-todo">TODO: confirm both used the same NPPES release; if not, that likely explains the gap</mark>
-                    </p>
+                      confidence in both. Ensuring the same NPPES release is used could address this.
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -648,14 +641,14 @@ EMAIL: sarahsl7@uci.edu
                       Now a new slice, such as a different city, county, or
                       specialty, is a question instead of a script.
                     </p>
-                  </div>
+                  </div>s
                 </div>
               </div>
 
               <div class="cs-box">
-                <h3>Outcomes at CareNiva</h3>
+                <h3>Impact at CareNiva</h3>
                 <p>
-                  <mark class="cs-todo">TODO: add what happened after launch. Who used it? How many searches or exports? What did it replace, and how much time did it save? Even one honest sentence or a quote from a teammate beats a guess.</mark>
+                  By the end of the internhip, the first version of the web app was shipped to CareNiva's engineering team for review & deployment. We've received great feedback on it, with the Supervisor sharing that this tool would "help them to save significant time in searching for relevant clients."
                 </p>
               </div>
             </section>
@@ -666,20 +659,20 @@ EMAIL: sarahsl7@uci.edu
               <h2>What I learned, and what is still open.</h2>
 
               <div class="cs-box">
-                <h3>Trust is the real interface.</h3>
+                <h4>Trust is the real interface.</h4>
                 <p>
                   In a data tool, the hardest UX problem was not the layout. It
                   was making sure a person could believe the number, so I spent
                   more time on scope labels, ambiguity handling, and guardrails
                   than on visuals.
                 </p>
-                <h3>Constraints are a design material.</h3>
+                <h4>Constraints are a design material.</h4>
                 <p>
                   Every "no" (no whole-state comparisons, capped exports) made
                   the tool faster and more predictable. The agent got better
                   when I gave it less freedom.
                 </p>
-                <h3>Data design is UX design.</h3>
+                <h4>Data design is UX design.</h4>
                 <p>
                   County search, plain-language specialties, and a pre-joined
                   database were backend work, but they decided what questions
@@ -725,7 +718,7 @@ EMAIL: sarahsl7@uci.edu
                       the hosted app can use it
                     </li>
                     <li>Add an interactive map of providers and search by month</li>
-                    <li>Make the interface fully usable on tablets and phones</li>
+                    <li>Make the interface fully responsive on tablets and phones</li>
                   </ul>
                 </div>
               </div>

@@ -155,6 +155,10 @@ body {
   color: black;
 }
 
+.about-toolbox {
+  margin-top: 60px;
+}
+
 .footer {
   padding-top: 48px;
   padding-bottom: 24px;
@@ -337,7 +341,6 @@ body {
 }
 
 .cs-section p {
-  max-width: 65ch;
   line-height: 1.65;
   overflow-wrap: anywhere;
 }
@@ -585,10 +588,6 @@ main .container {
   animation: art-scroll 85s linear infinite;
 }
 
-.art-track:hover {
-  animation-play-state: paused;
-}
-
 .art-track li {
   flex: none;
 }
@@ -688,10 +687,19 @@ main .container {
   column-gap: 8px;
   row-gap: 2px;
   min-height: 24px;
+  /* thin line 8px under each row, like the example (7px padding + 1px border) */
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ebebeb;
 }
 
+/* keeps your 49px row-to-row spacing: 32px row + 17px gap */
 .exp-row + .exp-row {
-  margin-top: 20px;
+  margin-top: 17px;
+}
+
+/* no line under the last job */
+.exp-row:last-child {
+  border-bottom-color: transparent;
 }
 
 .exp-logo {
@@ -789,7 +797,6 @@ main .container {
 }
 
 .cs-bullets {
-  max-width: 65ch;
   padding-left: 1.25rem;
   line-height: 1.65;
 }
@@ -850,7 +857,6 @@ main .container {
 }
 
 .cs-caption {
-  max-width: 65ch;
   margin-top: 0.75rem;
   color: #595959;
   font-size: 0.85rem;
