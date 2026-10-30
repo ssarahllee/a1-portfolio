@@ -19,13 +19,17 @@ EMAIL: sarahsl7@uci.edu
     <!-- you would also link to Bootstrap here! -->
     <title>Sarah Lee's Roomscape Case Study</title>
   </head>
-  <body>
+  <body
+    class="cs-page"
+    data-bs-spy="scroll"
+    data-bs-target="#cs-sections"
+    data-bs-root-margin="-25% 0px -65% 0px"
+    data-bs-threshold="[0,0.05,0.1,0.5,1]"
+    tabindex="0"
+  >
     <!-- nav bar -->
     <header>
-      <nav
-        class="navbar portfolio-nav cs-nav fixed-top"
-        aria-label="Sarah Lee, home page"
-      >
+      <nav class="navbar portfolio-nav cs-nav fixed-top" aria-label="Main">
         <div
           class="container d-flex justify-content-between align-items-center"
         >
@@ -33,11 +37,7 @@ EMAIL: sarahsl7@uci.edu
 
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="#works"
-                aria-label="Works"
+              <a class="nav-link" href="index.html#works" aria-label="Works"
                 >Works</a
               >
             </li>
@@ -58,33 +58,558 @@ EMAIL: sarahsl7@uci.edu
       </nav>
     </header>
 
-    <main class="container section">
-      <!-- hero -->
-      <img
-        src="RoomscapeApp.png"
-        class="img-fluid cs-hero-img"
-        alt="Roomscape app on two phones showing a login screen and a home screen with furniture recommendations."
-      />
-      <!-- back button -->
-      <a href="index.html#works" class="back-button"><- Works</a>
-      <h1 class="cs-title">Roomscape - AR Shopping Experience</h1>
-      <h2 class="cs-summary">
-        Leveraging AR design to enhance spatial visualization and empower
-        confidence decision-making in online furniture retail.
-      </h2>
-      <!-- introduction-->
-      <div class="row cs-intro">
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">My Role</p>
-          <p>UI/UX Designer</p>
+    <main id="main-content">
+      <!-- banner: full width, directly under the nav -->
+      <div class="cs-banner cs-banner-roomscape">
+        <img
+          src="RoomscapeApp.png"
+          class="cs-banner-img"
+          alt="Roomscape app on two phones showing a login screen and a home screen with furniture recommendations."
+        />
+      </div>
+
+      <!-- title and quick facts -->
+      <div class="cs-header">
+        <div class="container">
+          <div class="row align-items-center g-3">
+            <div class="col-12 col-md-8">
+              <h1 class="cs-title">Roomscape - AR Shopping Experience</h1>
+              <p class="cs-summary">
+                Leveraging AR design to enhance spatial visualization and
+                empower confident decision-making in online furniture retail.
+              </p>
+            </div>
+          </div>
+
+          <div class="row cs-meta">
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">My Role</p>
+              <p>UI/UX Designer</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">Team</p>
+              <p class="mb-0">4 UI/UX Designers</p>
+              <p class="mb-0">2 Developers</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">Timeline</p>
+              <p class="mb-0">Oct - Dec 2023</p>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <p class="cs-eyebrow">Skills / Tools</p>
+              <p class="mb-0">AR Design</p>
+              <p class="mb-0">Mobile Design</p>
+              <p class="mb-0">Interface Design</p>
+              <p class="mb-0">User Research</p>
+              <p class="mb-0">Prototyping</p>
+              <p class="mb-0">Figma & FigJam</p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Timeline</p>
-          <p>Apr 2025 - Jun 2025</p>
-        </div>
-        <div class="col-6 col-md-3 mb-3">
-          <p class="label">Tools</p>
-          <p>Figma, FigJam, Sketch</p>
+      </div>
+
+      <!-- side nav + content -->
+      <div class="container cs-body">
+        <div class="row g-5">
+          <aside class="col-12 col-md-3 col-lg-2">
+            <div class="cs-side">
+              <a href="index.html#works" class="back-button">&larr; Works</a>
+              <nav
+                class="cs-sections"
+                id="cs-sections"
+                aria-label="Case study sections"
+              >
+                <ul
+                  class="list-unstyled d-flex flex-wrap flex-md-column flex-md-nowrap gap-3 gap-md-0"
+                >
+                  <li>
+                    <a href="#overview" class="cs-section-link">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#problem" class="cs-section-link">Problem</a>
+                  </li>
+                  <li>
+                    <a href="#guiding-question" class="cs-section-link"
+                      >Guiding Question</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#solution" class="cs-section-link">Solution</a>
+                  </li>
+                  <li>
+                    <a href="#research" class="cs-section-link">Research</a>
+                  </li>
+                  <li>
+                    <a href="#initial-designs" class="cs-section-link"
+                      >Initial Designs</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#user-testing" class="cs-section-link"
+                      >User Testing</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#final-designs" class="cs-section-link"
+                      >Final Designs</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#design-system" class="cs-section-link"
+                      >Design System</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#reflection" class="cs-section-link">Reflection</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="col-12 col-md-9 col-lg-9 cs-content">
+            <section id="overview" class="cs-section">
+              <p class="cs-eyebrow">Overview</p>
+              <h2>
+                A mobile furniture shopping app that uses augmented reality (AR)
+                to help users visualize furniture in their actual living spaces
+                before making a purchase.
+              </h2>
+              <h3 class="cs-subhead">Project description</h3>
+              <p>
+                <strong>Roomscape was awarded 1st place</strong> at the Project
+                Teams Demo Day hosted by Design at UCI, a student-led
+                organization that brings together aspiring UI/UX and graphic
+                designers at the University of California, Irvine. The theme for
+                this design challenge was Retail, so my team chose to develop a
+                product that could reimagine how users shop for furniture
+                online.
+              </p>
+
+              <h3 class="cs-subhead">Design process</h3>
+              <div class="row g-4 cs-steps cs-process">
+                <div class="col-12 col-md-6 col-lg">
+                  <p class="cs-eyebrow">Step 1</p>
+                  <h3>Discover</h3>
+                </div>
+                <span class="cs-process-arrow" aria-hidden="true">&rarr;</span>
+                <div class="col-12 col-md-6 col-lg">
+                  <p class="cs-eyebrow">Step 2</p>
+                  <h3>Define</h3>
+                </div>
+                <span class="cs-process-arrow" aria-hidden="true">&rarr;</span>
+                <div class="col-12 col-md-6 col-lg">
+                  <p class="cs-eyebrow">Step 3</p>
+                  <h3>Design</h3>
+                </div>
+                <span class="cs-process-arrow" aria-hidden="true">&rarr;</span>
+                <div class="col-12 col-md-6 col-lg">
+                  <p class="cs-eyebrow">Step 4</p>
+                  <h3>Test</h3>
+                </div>
+                <span class="cs-process-arrow" aria-hidden="true">&rarr;</span>
+                <div class="col-12 col-md-6 col-lg">
+                  <p class="cs-eyebrow">Step 5</p>
+                  <h3>Deliver</h3>
+                </div>
+              </div>
+            </section>
+
+            <section id="problem" class="cs-section">
+              <p class="cs-eyebrow">Problem</p>
+              <h3>
+                In the world of online furniture shopping and interior design,
+                <strong
+                  >customers struggle to visualize furniture in their living
+                  spaces,</strong
+                >
+                hindering confident online purchases.
+              </h3>
+              <p>
+                Traditional platforms lack immersive features, causing increased
+                returns and diminished satisfaction.
+              </p>
+            </section>
+
+            <section id="guiding-question" class="cs-section">
+              <div class="cs-guiding">
+                <p class="cs-eyebrow">Guiding Question</p>
+                <p class="cs-guiding-text">
+                  How do we create a mobile application that allows customers to
+                  <span class="cs-guiding-accent"
+                    >visualize furniture in their own homes</span
+                  >, and
+                  <span class="cs-guiding-accent">increase confidence</span> in
+                  their purchases?
+                </p>
+              </div>
+            </section>
+
+            <section id="solution" class="cs-section">
+              <p class="cs-eyebrow">Solution</p>
+              <h2>
+                <mark class="cs-todo"
+                  >TODO: headline describing your solution</mark
+                >
+              </h2>
+              <p>
+                <mark class="cs-todo"
+                  >TODO: describe Roomscape and how it answers the guiding
+                  question</mark
+                >
+              </p>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-todo-panel">
+                  <span
+                    ><mark class="cs-todo"
+                      >TODO: add an image of the solution
+                      (roomscape/solution.png)</mark
+                    ></span
+                  >
+                </div>
+              </figure>
+            </section>
+
+            <section id="research" class="cs-section">
+              <p class="cs-eyebrow">Research</p>
+              <h2>Understanding our stakeholders</h2>
+              <h3 class="cs-subhead"><strong>User surveys</strong></h3>
+              <p>
+                We conducted a survey with 71 participants to understand user
+                behavior and identify market opportunities.
+              </p>
+              <div class="row g-4 cs-stats">
+                <div class="col-12 col-md-4">
+                  <p class="cs-stat-number">98.6%</p>
+                  <p class="cs-stat-label">IKEA</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="cs-stat-number">74.6%</p>
+                  <p class="cs-stat-label">Target/Walmart</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="cs-stat-number">71.8%</p>
+                  <p class="cs-stat-label">Amazon</p>
+                </div>
+              </div>
+              <p>
+                Most of our users shopped at affordable retailers such as these,
+                but 78.9% still struggled to find pieces that matched their
+                space and style. A key challenge was not being able to visualize
+                how furniture would look or fit in their homes, leading to low
+                confidence and higher return rates. Users wanted a better way to
+                preview furniture accurately while staying within their budget
+                and aesthetic.
+              </p>
+
+              <h3 class="cs-subhead"><strong>Competitive analysis</strong></h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide">
+                  <span
+                    ><img
+                      src="roomscape/competitive-analysis.png"
+                      alt="Comparison table of IKEA, Magicplan, DecorMatters, Living Spaces See in Your Room, and Foyr Neo across nine features: AR function, design inspiration, room dimension flexibility, subscription, featured furniture brands, social media integration, furniture purchasing, emphasis on interior design, and graphics instead of retail furniture."
+                  /></span>
+                </div>
+              </figure>
+              <p>
+                To better understand the landscape of furniture and interior
+                design apps, we conducted a competitive analysis of five key
+                platforms: IKEA, Magicplan, DecorMatters, Living Spaces See in
+                Your Room, and Foyr Neo.
+              </p>
+
+              <h3 class="cs-subhead"><strong>Overall findings</strong></h3>
+              <ul class="cs-bullets">
+                <li>
+                  Augmented Reality (AR) technology is still very new to the
+                  e-commerce space, but people are eager to try it. It has not
+                  been utilized in retail, making it a less competitive market.
+                </li>
+                <li>
+                  In-person shopping was foound to be more popular than online;
+                  people prefer to visualize furniture in a room rather than
+                  pictures online.
+                </li>
+                <li>
+                  People want to look for the most affordable deals when finding
+                  furniture, so they will promarily shop at companies such as
+                  Target, Walmart, etc.
+                </li>
+              </ul>
+              <h3 class="cs-subhead"><strong>Ideation</strong></h3>
+              <div class="row g-3 cs-goals">
+                <div class="col-12 col-md-4">
+                  <div class="cs-goal">
+                    <img src="roomscape/goal-app.png" alt="" />
+                    <p>
+                      Create an app that helps users visualize furniture in
+                      their own space
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="cs-goal">
+                    <img src="roomscape/goal-aesthetic.png" alt="" />
+                    <p>
+                      Help users curate a specific aesthetic, using AR features
+                      to bring that dream to reality
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="cs-goal">
+                    <img src="roomscape/goal-compare.png" alt="" />
+                    <p>
+                      Allow users to compare across different brands of popular
+                      furniture
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="cs-subhead"><strong>Potential Solutions</strong></h3>
+              <div class="cs-solutions">
+                <div class="cs-solution-row">
+                  <div class="cs-solution-q">
+                    <p>Comparing products across different brands?</p>
+                  </div>
+                  <svg
+                    class="cs-solution-arrow"
+                    width="40"
+                    height="18"
+                    viewBox="0 0 40 18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path fill="currentColor" d="M0 6h26V0l14 9-14 9v-6H0z" />
+                  </svg>
+                  <p class="cs-solution-a">
+                    Organize products by brand to directly compare
+                  </p>
+                </div>
+                <div class="cs-solution-row">
+                  <div class="cs-solution-q">
+                    <p>Finding the most affordable option?</p>
+                  </div>
+                  <svg
+                    class="cs-solution-arrow"
+                    width="40"
+                    height="18"
+                    viewBox="0 0 40 18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path fill="currentColor" d="M0 6h26V0l14 9-14 9v-6H0z" />
+                  </svg>
+                  <p class="cs-solution-a">
+                    Using filters and comparison components
+                  </p>
+                </div>
+                <div class="cs-solution-row">
+                  <div class="cs-solution-q">
+                    <p>Increasing confidence to purchase furniture?</p>
+                    <p>Testing furniture in their own homes?</p>
+                  </div>
+                  <svg
+                    class="cs-solution-arrow"
+                    width="40"
+                    height="18"
+                    viewBox="0 0 40 18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path fill="currentColor" d="M0 6h26V0l14 9-14 9v-6H0z" />
+                  </svg>
+                  <p class="cs-solution-a">
+                    Using AR features to allow users to visualize furniture in
+                    their home
+                  </p>
+                </div>
+              </div>
+
+              <h3 class="cs-subhead"><strong>User flow</strong></h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide">
+                  <span
+                    ><img
+                      src="roomscape/user-flow.png"
+                      alt="User flow diagram. Login page: open Roomscape, welcome page, create or log in, home page. Home page branches from opening Roomscape into creating a room (name it, scan the room with the camera, AR view, search for furniture, move, rotate and delete items), viewing created rooms (profile and personal information, or view and edit rooms in AR), checkout (address and delivery, payment and order summary, review and order), and browsing items (scroll, filter by options)."
+                  /></span>
+                </div>
+              </figure>
+            </section>
+
+            <section id="initial-designs" class="cs-section">
+              <p class="cs-eyebrow">Initial Designs</p>
+              <h2>
+                <mark class="cs-todo"
+                  >TODO: headline for your early design thinking</mark
+                >
+              </h2>
+              <h3 class="cs-subhead">Low-fidelity wireframes</h3>
+              <p>
+                <mark class="cs-todo">TODO: what you explored and why</mark>
+              </p>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-todo-panel">
+                  <span
+                    ><mark class="cs-todo"
+                      >TODO: add low-fidelity wireframes
+                      (images/roomscape-wireframes.png)</mark
+                    ></span
+                  >
+                </div>
+                <figcaption class="cs-caption">
+                  <mark class="cs-todo">TODO: wireframes caption</mark>
+                </figcaption>
+              </figure>
+            </section>
+
+            <section id="user-testing" class="cs-section">
+              <p class="cs-eyebrow">User Testing</p>
+              <h2>
+                <mark class="cs-todo"
+                  >TODO: headline for your testing results</mark
+                >
+              </h2>
+              <h3 class="cs-subhead">Feedback</h3>
+              <p>
+                <mark class="cs-todo">TODO: how you tested and with whom</mark>
+              </p>
+              <ul class="cs-bullets">
+                <li><mark class="cs-todo">TODO: feedback theme</mark></li>
+                <li><mark class="cs-todo">TODO: feedback theme</mark></li>
+                <li><mark class="cs-todo">TODO: feedback theme</mark></li>
+              </ul>
+
+              <h3 class="cs-subhead">Iteration</h3>
+              <p>
+                <mark class="cs-todo"
+                  >TODO: what you changed because of the feedback</mark
+                >
+              </p>
+              <ul class="cs-bullets">
+                <li><mark class="cs-todo">TODO: change you made</mark></li>
+                <li><mark class="cs-todo">TODO: change you made</mark></li>
+                <li><mark class="cs-todo">TODO: change you made</mark></li>
+              </ul>
+            </section>
+
+            <section id="final-designs" class="cs-section">
+              <p class="cs-eyebrow">Final Designs</p>
+              <h2>
+                <mark class="cs-todo">TODO: headline for the final design</mark>
+              </h2>
+              <h3 class="cs-subhead">Branding</h3>
+              <p>
+                <mark class="cs-todo"
+                  >TODO: describe the brand, colors, and type</mark
+                >
+              </p>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-todo-panel">
+                  <span
+                    ><mark class="cs-todo"
+                      >TODO: add branding visuals
+                      (images/roomscape-branding.png)</mark
+                    ></span
+                  >
+                </div>
+                <figcaption class="cs-caption">
+                  <mark class="cs-todo">TODO: branding caption</mark>
+                </figcaption>
+              </figure>
+
+              <h3 class="cs-subhead">AR flow</h3>
+              <p>
+                <mark class="cs-todo"
+                  >TODO: describe how the AR experience works</mark
+                >
+              </p>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-todo-panel">
+                  <span
+                    ><mark class="cs-todo"
+                      >TODO: add AR flow screens
+                      (images/roomscape-ar-flow.png)</mark
+                    ></span
+                  >
+                </div>
+                <figcaption class="cs-caption">
+                  <mark class="cs-todo">TODO: AR flow caption</mark>
+                </figcaption>
+              </figure>
+
+              <h3 class="cs-subhead">Shopping flow</h3>
+              <p>
+                <mark class="cs-todo"
+                  >TODO: describe the shopping experience</mark
+                >
+              </p>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-todo-panel">
+                  <span
+                    ><mark class="cs-todo"
+                      >TODO: add shopping flow screens
+                      (images/roomscape-shopping-flow.png)</mark
+                    ></span
+                  >
+                </div>
+                <figcaption class="cs-caption">
+                  <mark class="cs-todo">TODO: shopping flow caption</mark>
+                </figcaption>
+              </figure>
+            </section>
+
+            <section id="design-system" class="cs-section">
+              <p class="cs-eyebrow">Design System</p>
+              <h2>
+                <mark class="cs-todo"
+                  >TODO: headline for your design system</mark
+                >
+              </h2>
+              <h3 class="cs-subhead">Color</h3>
+              <p>
+                <mark class="cs-todo">TODO: describe the color palette</mark>
+              </p>
+              <h3 class="cs-subhead">Typography</h3>
+              <p><mark class="cs-todo">TODO: describe the type styles</mark></p>
+              <h3 class="cs-subhead">Components</h3>
+              <figure class="cs-figure">
+                <div class="cs-panel cs-panel-wide cs-todo-panel">
+                  <span
+                    ><mark class="cs-todo"
+                      >TODO: add your components
+                      (roomscape/design-system.png)</mark
+                    ></span
+                  >
+                </div>
+              </figure>
+            </section>
+
+            <section id="reflection" class="cs-section">
+              <p class="cs-eyebrow">Reflection</p>
+              <h2>
+                <mark class="cs-todo">TODO: headline for what you learned</mark>
+              </h2>
+              <ul class="cs-bullets">
+                <li><mark class="cs-todo">TODO: takeaway</mark></li>
+                <li><mark class="cs-todo">TODO: takeaway</mark></li>
+                <li><mark class="cs-todo">TODO: takeaway</mark></li>
+              </ul>
+
+              <h3 class="cs-subhead">Future iterations</h3>
+              <ul class="cs-bullets">
+                <li>
+                  <mark class="cs-todo">TODO: what you would do next</mark>
+                </li>
+                <li>
+                  <mark class="cs-todo">TODO: what you would do next</mark>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </main>
@@ -108,7 +633,9 @@ EMAIL: sarahsl7@uci.edu
             <div>
               <p class="label">Pages</p>
               <ul class="list-unstyled" aria-label="Pages">
-                <li><a href="#works" class="footer-link">Works</a></li>
+                <li>
+                  <a href="index.html#works" class="footer-link">Works</a>
+                </li>
                 <li><a href="about.html" class="footer-link">About</a></li>
                 <li>
                   <a
@@ -143,6 +670,7 @@ EMAIL: sarahsl7@uci.edu
         </div>
       </div>
     </footer>
-      <script src="nav.js"></script>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>
