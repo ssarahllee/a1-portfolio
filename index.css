@@ -1,4 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap");
+
+:root {
+  --esports-gradient:
+    radial-gradient(
+      ellipse 45% 100% at 0% 0%,
+      #93befb 0%,
+      rgba(147, 190, 251, 0) 100%
+    ),
+    radial-gradient(
+      ellipse 45% 100% at 100% 0%,
+      #9fc3fb 0%,
+      rgba(159, 195, 251, 0) 100%
+    ),
+    radial-gradient(
+      ellipse 40% 90% at 0% 55%,
+      rgba(173, 193, 207, 0.8) 0%,
+      rgba(173, 193, 207, 0) 100%
+    ),
+    radial-gradient(
+      ellipse 40% 90% at 100% 55%,
+      rgba(178, 196, 201, 0.8) 0%,
+      rgba(178, 196, 201, 0) 100%
+    ),
+    linear-gradient(to bottom, #c6cdcb 0%, #d0ca98 55%, #eac83b 100%);
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -25,7 +50,7 @@ body {
 }
 
 .nav-brand:hover {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .portfolio-nav .nav {
@@ -40,12 +65,20 @@ body {
 }
 
 .portfolio-nav .nav-link:hover {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .top {
   color: black;
   position: relative;
+}
+
+.top a {
+  color: inherit;
+}
+
+.top a:hover {
+  color: #5965C9;
 }
 
 @media screen and (max-width: 640px) {
@@ -71,12 +104,14 @@ body {
 
 .top h1 {
   color: black;
+  font-family: "Inter", Inter, serif;
   font-size: 4em;
   font-weight: normal;
 }
 
 .description {
-  font-size: 1.5em;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6em;
   margin-bottom: 2em;
 }
 
@@ -99,16 +134,43 @@ body {
 }
 
 .works-card {
-  overflow: hidden;
   border: none;
 }
 
-.works-card:hover {
-  border-color: #496d89;
+.works-card-media {
+  overflow: hidden;
+  border: 0.25px solid rgba(128, 128, 128, 0.283);
+  border-radius: 10px;
 }
 
 .works-card-img {
-  border: 0.25px solid rgba(128, 128, 128, 0.283);
+  display: block;
+  transition: transform 400ms ease-out;
+}
+
+.works-card:focus-within .works-card-img {
+  transform: scale(1.04);
+}
+
+@media (hover: hover) {
+  .works-card:hover .works-card-img {
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .works-card-img {
+    transition: none;
+  }
+
+  .works-card:hover .works-card-img,
+  .works-card:focus-within .works-card-img {
+    transform: none;
+  }
+}
+
+.works-card:hover {
+  border-color: #5965c9;
 }
 
 .works-tag {
@@ -123,11 +185,11 @@ body {
 }
 
 .card-body:hover .works-link {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .card-body:hover .card-description {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .profile-img {
@@ -175,7 +237,7 @@ body {
 }
 
 .footer-btn:hover {
-  background-color: #496d89;
+  background-color: #5965c9;
 }
 
 .footer-link {
@@ -184,7 +246,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .back-button {
@@ -196,7 +258,7 @@ body {
 }
 
 .back-button:hover {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .cs-hero-img {
@@ -299,14 +361,17 @@ body {
   text-decoration: none;
 }
 
-.cs-section-link:hover,
 .cs-section-link.active {
   color: #1a1a1a;
 }
 
+.cs-section-link:hover {
+  color: #5965c9;
+}
+
 .cs-eyebrow {
   margin-bottom: 1rem;
-  color: rgb(0, 0, 227);
+  color: #5965c9;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -485,7 +550,7 @@ body {
   }
 
   .cs-section-link.active {
-    border-left-color: rgb(0, 0, 227);
+    border-left-color: #5965c9;
   }
 }
 
@@ -671,7 +736,7 @@ main .container {
 }
 
 .exp-resume:hover {
-  color: #496d89;
+  color: #5965c9;
 }
 
 .exp-list {
@@ -751,6 +816,14 @@ main .container {
 /* ---------- CareNiva case study ---------- */
 .cs-banner-careniva {
   background-color: #fafcfe;
+}
+
+.cs-banner-esports {
+  background: var(--esports-gradient);
+}
+
+.works-card-img-esports {
+  background: var(--esports-gradient);
 }
 
 .cs-banner-roomscape {
