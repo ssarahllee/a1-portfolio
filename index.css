@@ -39,6 +39,10 @@ body {
   color: white;
 }
 
+.highlight-text {
+  color: #5965c9;
+}
+
 .portfolio-nav {
   padding: 20px;
 }
@@ -78,7 +82,7 @@ body {
 }
 
 .top a:hover {
-  color: #5965C9;
+  color: #5965c9;
 }
 
 @media screen and (max-width: 640px) {
