@@ -819,11 +819,24 @@ main .container {
 
 /* ---------- CareNiva case study ---------- */
 .cs-banner-careniva {
-  background-color: #fafcfe;
+  background-color: #ffe2d0;
 }
 
 .cs-banner-esports {
   background: var(--esports-gradient);
+}
+
+.works-card-media-careniva {
+  background-color: #ffe2d0;
+}
+
+.works-card-img-careniva {
+  object-fit: contain;
+  filter: drop-shadow(0 18px 24px rgba(60, 30, 10, 0.28));
+}
+
+.cs-banner-careniva .cs-banner-img {
+  filter: drop-shadow(0 18px 24px rgba(60, 30, 10, 0.28));
 }
 
 .works-card-img-esports {
